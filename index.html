@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-        <meta name="theme-color" content="#101519">
-        <meta name="description" content="COURTSIDE 26：完全离线、原生 WebGL 2、单文件 3D 五对五篮球游戏。">
+<html lang="zh-CN" data-page-node-id="voEqT3gPwzhcnjuhkPg47v">
+    <head data-page-node-id="2a3oCYwrAFpDmWKHRUyNuk">
+        <meta charset="utf-8" data-page-node-id="Ge3GgO7vtGrBfuHqYdv6Ai">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" data-page-node-id="DLVfXevS4ui2cX06ArAu2L">
+        <meta name="theme-color" content="#101519" data-page-node-id="l8Lw8BcHFgy5mQ0brnoTqs">
+        <meta name="description" content="COURTSIDE 26：完全离线、原生 WebGL 2、单文件 3D 五对五篮球游戏。" data-page-node-id="aFL1ZKRgorKcEXtare3SUn">
         <title>COURTSIDE 26 · 3D 篮球</title>
         <style>
             :root {
@@ -1143,9 +1143,8 @@
 
             .minimap-wrap {
                 position: absolute;
-                left: 50%;
-                bottom: 52px;
-                transform: translateX(-50%);
+                right: 24px;
+                top: 126px;
                 width: 210px;
                 background: rgba(12,24,26,.66);
                 border: 1px solid #aec3ac28;
@@ -1454,7 +1453,7 @@
             .event-feed {
                 position: absolute;
                 right: 28px;
-                top: 157px;
+                top: 266px;
                 width: 174px;
                 display: flex;
                 flex-direction: column;
@@ -1969,10 +1968,10 @@
 
             #joystick {
                 position: absolute;
-                width: 120px;
-                height: 120px;
-                left: 35px;
-                bottom: 12px;
+                width: 144px;
+                height: 144px;
+                left: 75px;
+                bottom: 52px;
                 border-radius: 50%;
                 border: 1px solid #c0ddb655;
                 background: #15262960;
@@ -2002,11 +2001,11 @@
 
             #joystickKnob {
                 position: absolute;
-                width: 44px;
-                height: 44px;
+                width: 52px;
+                height: 52px;
                 border-radius: 50%;
-                left: 37px;
-                top: 37px;
+                left: 46px;
+                top: 46px;
                 background: #c1e99960;
                 border: 1px solid #c1e999aa;
                 z-index: 1
@@ -2017,7 +2016,7 @@
                 right: 25px;
                 bottom: 0;
                 width: 220px;
-                height: 155px
+                height: 200px
             }
 
             .touch-buttons button {
@@ -2039,8 +2038,8 @@
             }
 
             #touchShoot {
-                right: 3px;
-                bottom: 34px;
+                right: 87px;
+                bottom: 0;
                 width: 75px;
                 height: 75px;
                 background: #b5dc8845;
@@ -2049,21 +2048,21 @@
             }
 
             #touchPass {
-                right: 89px;
-                bottom: 6px
+                right: 60px;
+                bottom: 68px
             }
 
             #touchMove {
-                right: 94px;
-                bottom: 80px
+                right: 0;
+                bottom: 100px
             }
 
             #touchSprint {
-                right: 163px;
-                bottom: 39px;
-                width: 51px;
-                height: 51px;
-                font-size: 9px
+                right: 0;
+                bottom: 198px;
+                width: 80px;
+                height: 80px;
+                font-size: 12px
             }
 
             body.touch-device.playing .controls-hint {
@@ -2071,14 +2070,9 @@
             }
 
             body.touch-device.playing .player-card {
-                bottom: 208px;
+                bottom: 246px;
                 transform: scale(.83);
                 transform-origin: bottom left
-            }
-
-            body.touch-device.playing .minimap-wrap {
-                bottom: 205px;
-                transform: translateX(-50%) scale(.8)
             }
 
             @keyframes feed-in {
@@ -2562,9 +2556,10 @@
                 }
 
                 .minimap-wrap {
-                    transform: translateX(-50%) scale(.85);
-                    transform-origin: bottom center;
-                    bottom: 42px
+                    top: 112px;
+                    right: 20px;
+                    transform: scale(.85);
+                    transform-origin: top right
                 }
 
                 .controls-hint {
@@ -2579,7 +2574,7 @@
                 }
 
                 .event-feed {
-                    top: 147px;
+                    top: 240px;
                     width: 135px;
                     right: 20px
                 }
@@ -2801,10 +2796,12 @@
                 }
 
                 .minimap-wrap {
-                    bottom: 205px!important;
-                    left: 16px;
-                    transform: scale(.70)!important;
-                    transform-origin: left bottom!important
+                    top: 170px!important;
+                    right: 16px!important;
+                    bottom: auto!important;
+                    left: auto!important;
+                    transform: scale(.62)!important;
+                    transform-origin: top right!important
                 }
 
                 .feedback {
@@ -2853,7 +2850,7 @@
                 }
 
                 .event-feed {
-                    top: 215px;
+                    top: 262px;
                     right: 16px;
                     width: 120px
                 }
@@ -2907,14 +2904,14 @@
                 }
 
                 #joystick {
-                    left: 23px;
-                    width: 105px;
-                    height: 105px
+                    left: 63px;
+                    width: 126px;
+                    height: 126px
                 }
 
                 #joystickKnob {
-                    left: 30px;
-                    top: 30px
+                    left: 37px;
+                    top: 37px
                 }
 
                 .touch-buttons {
@@ -3213,8 +3210,10 @@
                 }
 
                 .minimap-wrap {
-                    transform: translateX(-50%) scale(.65);
-                    bottom: 37px
+                    top: 100px;
+                    right: 16px;
+                    transform: scale(.62);
+                    transform-origin: top right
                 }
 
                 .controls-hint {
@@ -3249,7 +3248,7 @@
                 }
 
                 .event-feed {
-                    top: 108px;
+                    top: 192px;
                     width: 125px;
                     right: 20px
                 }
@@ -3272,25 +3271,20 @@
                     display: none
                 }
 
-                body.touch-device.playing .minimap-wrap {
-                    bottom: 39px;
-                    transform: translateX(-50%) scale(.65)
-                }
-
                 #touchControls {
                     bottom: 29px;
                     height: 140px
                 }
 
                 #joystick {
-                    width: 95px;
-                    height: 95px;
-                    left: 31px
+                    width: 114px;
+                    height: 114px;
+                    left: 71px
                 }
 
                 #joystickKnob {
-                    left: 25px;
-                    top: 25px
+                    left: 31px;
+                    top: 31px
                 }
 
                 .touch-buttons {
@@ -3486,640 +3480,640 @@ body.playing:has(#netHud:not([hidden])) .last-shot { top:174px; }
 
         </style>
     </head>
-    <body>
-        <svg class="sprite" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <symbol id="i-arrow" viewBox="0 0 24 24">
-                    <path d="M4 12h15m-6-6 6 6-6 6"/>
+    <body data-page-node-id="bwGHu7szMaEj3GG21kAWag">
+        <svg class="sprite" xmlns="http://www.w3.org/2000/svg" data-page-node-id="PDBHvfBAAyrSKz8isRwy6A">
+            <defs data-page-node-id="m75Q0PJxiUJOxA0WXNx3mB">
+                <symbol id="i-arrow" viewBox="0 0 24 24" data-page-node-id="U8qYy1nyKVNEGTmDgF67rF">
+                    <path d="M4 12h15m-6-6 6 6-6 6" data-page-node-id="0lSB3CB9wciGF90XCvhB2w"/>
                 </symbol>
-                <symbol id="i-play" viewBox="0 0 24 24">
-                    <path d="m8 5 11 7-11 7z"/>
+                <symbol id="i-play" viewBox="0 0 24 24" data-page-node-id="Y1ASerddUrE6rBAijArW2B">
+                    <path d="m8 5 11 7-11 7z" data-page-node-id="LQB3k1SdvBTgMrUhRxnVOA"/>
                 </symbol>
-                <symbol id="i-pause" viewBox="0 0 24 24">
-                    <path d="M8 5v14M16 5v14"/>
+                <symbol id="i-pause" viewBox="0 0 24 24" data-page-node-id="6q0ElO1VptpBgvBUXe4frx">
+                    <path d="M8 5v14M16 5v14" data-page-node-id="BAeepO2ttwqfAZZQh3gjLh"/>
                 </symbol>
-                <symbol id="i-sound" viewBox="0 0 24 24">
-                    <path d="m11 5-5 4H3v6h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>
+                <symbol id="i-sound" viewBox="0 0 24 24" data-page-node-id="Bdm1sm9jAktKBBpKK6GqRk">
+                    <path d="m11 5-5 4H3v6h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" data-page-node-id="XeAhkzoMdIiJefXg5hPF05"/>
                 </symbol>
-                <symbol id="i-full" viewBox="0 0 24 24">
-                    <path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/>
+                <symbol id="i-full" viewBox="0 0 24 24" data-page-node-id="8Te2jGc0W60ZcjBo9DbSGw">
+                    <path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5" data-page-node-id="zTw4EYATUCvEFoOALqG0ZB"/>
                 </symbol>
-                <symbol id="i-help" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M9 9a3 3 0 1 1 4 3c-1 .5-1 1-1 2m0 3h.01"/>
+                <symbol id="i-help" viewBox="0 0 24 24" data-page-node-id="l15fYvElkywOcmHR6h0DEZ">
+                    <circle cx="12" cy="12" r="9" data-page-node-id="iAJp3iURCidsLajQFPp4ai"/>
+                    <path d="M9 9a3 3 0 1 1 4 3c-1 .5-1 1-1 2m0 3h.01" data-page-node-id="k9OrmMjwsLy4gd1ohadS8E"/>
                 </symbol>
-                <symbol id="i-camera" viewBox="0 0 24 24">
-                    <path d="M3 7h5l2-3h4l2 3h5v13H3z"/>
-                    <circle cx="12" cy="13" r="4"/>
+                <symbol id="i-camera" viewBox="0 0 24 24" data-page-node-id="WmWGDVDCG2LEScsjtjGQQl">
+                    <path d="M3 7h5l2-3h4l2 3h5v13H3z" data-page-node-id="BIaH2akki7N9G2JT25DdXX"/>
+                    <circle cx="12" cy="13" r="4" data-page-node-id="GTopF1SnsmHzAwAqsYSL41"/>
                 </symbol>
-                <symbol id="i-settings" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-5 0v6"/>
+                <symbol id="i-settings" viewBox="0 0 24 24" data-page-node-id="3ab2RrL0Qq9Pvnnr97xYhE">
+                    <path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-5 0v6" data-page-node-id="iskQQ4xqgDZBf3qVADzWsV"/>
                 </symbol>
-                <symbol id="i-back" viewBox="0 0 24 24">
-                    <path d="M19 12H4m6-6-6 6 6 6"/>
+                <symbol id="i-back" viewBox="0 0 24 24" data-page-node-id="f21t3pPjyhSsnHGprzwSDM">
+                    <path d="M19 12H4m6-6-6 6 6 6" data-page-node-id="6hwlDaEl4NWiQPxeU9HsTT"/>
                 </symbol>
-                <symbol id="i-ball" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M3 12h18M12 3v18M5 5c9 3 9 11 0 14M19 5c-9 3-9 11 0 14"/>
+                <symbol id="i-ball" viewBox="0 0 24 24" data-page-node-id="ELAlylrXCbWxick84dgaT3">
+                    <circle cx="12" cy="12" r="9" data-page-node-id="69jjGaEFHXEM7BDXjdoGlr"/>
+                    <path d="M3 12h18M12 3v18M5 5c9 3 9 11 0 14M19 5c-9 3-9 11 0 14" data-page-node-id="uBOJsQ6yBJWkQ3yyuAxcTd"/>
                 </symbol>
             </defs>
         </svg>
-        <canvas id="stage" aria-label="3D 篮球球场"></canvas>
-        <div class="vignette"></div>
-        <div id="homeShade"></div>
-        <div id="loader">
-            <div class="loader-mark">
-                CS<span>/26</span>
+        <canvas id="stage" aria-label="3D 篮球球场" data-page-node-id="m2cRwqoLiqf1TfMWzzd8eQ"></canvas>
+        <div class="vignette" data-page-node-id="Jh4ffaSW126ap3Sg1xtGA5"></div>
+        <div id="homeShade" data-page-node-id="Hoiany9hz41cAEdJCl3oCR"></div>
+        <div id="loader" data-page-node-id="HVfBGvyClkR8LhQkeKo11u">
+            <div class="loader-mark" data-page-node-id="C4MEIdy6SHGDu38libgTmd">
+                CS<span data-page-node-id="Sf3PBfOxqHXJ3SqwIziXep">/26</span>
             </div>
-            <div class="loader-title">THE GAME IS YOURS.</div>
-            <div class="load-track">
-                <i id="loadbar"></i>
+            <div class="loader-title" data-page-node-id="xW2FOW5Vl3bOssuqqzuNIx">THE GAME IS YOURS.</div>
+            <div class="load-track" data-page-node-id="G5CMf5dOqYC1Lt3kb2YHFr">
+                <i id="loadbar" data-page-node-id="TQNo5Ti8wyOgox0vH1d1yJ"></i>
             </div>
-            <p id="loadtext">正在点亮球馆…</p>
+            <p id="loadtext" data-page-node-id="xliJuadcP0L4yCLXVbUaeh">正在点亮球馆…</p>
         </div>
-        <div id="fatal" hidden>
-            <h1>球馆暂时无法启动</h1>
-            <p id="fatalMessage"></p>
-            <p>请使用桌面版 Chrome、Edge 或 Safari，并检查浏览器硬件加速设置。</p>
+        <div id="fatal" hidden data-page-node-id="95oroSqZdUu06qVSED3Q4o">
+            <h1 data-page-node-id="IV3VRaKlwSSQMOG4uqZxTW">球馆暂时无法启动</h1>
+            <p id="fatalMessage" data-page-node-id="tRTNcIg6077Z9ZsDSbhDw2"></p>
+            <p data-page-node-id="V8mRDE9HP5yI7OFKBU6Dsg">请使用桌面版 Chrome、Edge 或 Safari，并检查浏览器硬件加速设置。</p>
         </div>
-        <header id="topbar">
-            <a class="brand" href="#" aria-label="COURTSIDE 26 主页">
-                <span class="brand-symbol">
-                    C<span>/</span>
+        <header id="topbar" data-page-node-id="VQeEThZiovfnCSF4qQJ5F3">
+            <a class="brand" href="#" aria-label="COURTSIDE 26 主页" data-page-node-id="4JXHtpOImB9fWI5NvUw8NU">
+                <span class="brand-symbol" data-page-node-id="InzFgdytZmxQt5CRC4j4F7">
+                    C<span data-page-node-id="nWqocw2ziHHHz15sgl0nFC">/</span>
                     S
                 </span>
-                <span class="brand-word">
-                    COURTSIDE<small>2 6 &nbsp;/ &nbsp;B A S K E T B A L L</small>
+                <span class="brand-word" data-page-node-id="bjk5UAVTlJimPOoclTD8OK">
+                    COURTSIDE<small data-page-node-id="yHyxfsOCTarRBuHiOESMIC">2 6 &nbsp;/ &nbsp;B A S K E T B A L L</small>
                 </span>
             </a>
-            <nav id="homeNav">
-                <button class="nav-item active" data-mode="quick">快速比赛</button>
-                <button class="nav-item" data-mode="online">&#x597d;&#x53cb;&#x8054;&#x673a;</button>
-                <button class="nav-item" data-mode="practice">自由训练</button>
-                <button class="nav-item" data-mode="watch">观战模式</button>
+            <nav id="homeNav" data-page-node-id="Q08o5OmC2wVORBlMG9CAN4">
+                <button class="nav-item active" data-mode="quick" data-page-node-id="jFxZf0OjLqn6VUP9LpEEFa">快速比赛</button>
+                <button class="nav-item" data-mode="online" data-page-node-id="d4kxn4rG6t8PxNiNMA1ine">&#x597d;&#x53cb;&#x8054;&#x673a;</button>
+                <button class="nav-item" data-mode="practice" data-page-node-id="qTimeiIRlLzG34AxYWmCpY">自由训练</button>
+                <button class="nav-item" data-mode="watch" data-page-node-id="bZzz1QBKv1Ux2K8JUVk3FB">观战模式</button>
             </nav>
-            <div class="top-actions">
-                <span class="local-tag">
-                    <i></i>
+            <div class="top-actions" data-page-node-id="oI78XoysNzzKSzeVxD5ec1">
+                <span class="local-tag" data-page-node-id="rp4K7FuJMEiGTPw7L9pV0d">
+                    <i data-page-node-id="0Q3ZMMMktuYNZ9tz6usdph"></i>
                     NO SERVER. JUST PLAY.
                 </span>
-                <button class="icon-btn" id="soundBtn" title="声音 M" aria-label="切换声音">
-                    <svg>
-                        <use href="#i-sound"/>
+                <button class="icon-btn" id="soundBtn" title="声音 M" aria-label="切换声音" data-page-node-id="EmtCtsAICfwknPaAxPZvdg">
+                    <svg data-page-node-id="2mQ1mBa5O630tgBaRUVMkd">
+                        <use href="#i-sound" data-page-node-id="fXSu9zS9jbLSKxhkKBHz84"/>
                     </svg>
                 </button>
-                <button class="icon-btn" id="fullBtn" title="全屏" aria-label="全屏">
-                    <svg>
-                        <use href="#i-full"/>
+                <button class="icon-btn" id="fullBtn" title="全屏" aria-label="全屏" data-page-node-id="m3aC8XdL7S7b86UoAXgEuQ">
+                    <svg data-page-node-id="2BIzQRveBMWRrZbrH3W9PZ">
+                        <use href="#i-full" data-page-node-id="kIxF61lYgLioAQUISNCxGJ"/>
                     </svg>
                 </button>
-                <button class="icon-btn" id="helpBtn" title="操作说明 H" aria-label="操作说明">
-                    <svg>
-                        <use href="#i-help"/>
+                <button class="icon-btn" id="helpBtn" title="操作说明 H" aria-label="操作说明" data-page-node-id="q2UTyh0MYoMasZR6vDa5Bv">
+                    <svg data-page-node-id="g093AcyPxCtZscDKbOzqON">
+                        <use href="#i-help" data-page-node-id="vR6tXQopQ489sichS2ccWE"/>
                     </svg>
                 </button>
-                <button class="icon-btn game-only" id="pauseBtn" title="暂停 Esc" aria-label="暂停">
-                    <svg>
-                        <use href="#i-pause"/>
+                <button class="icon-btn game-only" id="pauseBtn" title="暂停 Esc" aria-label="暂停" data-page-node-id="HzXL7g6vz1YYHIVTVkepeI">
+                    <svg data-page-node-id="YcGAHAstREX2MPttR1xbcL">
+                        <use href="#i-pause" data-page-node-id="AK2BR6vfhcWzkKNQcALTGz"/>
                     </svg>
                 </button>
             </div>
         </header>
-        <section id="home">
-            <div class="hero-copy">
-                <div class="eyebrow">
-                    <i></i>
+        <section id="home" data-page-node-id="Vk8x9ZFjguWp9wbv7XSmJu">
+            <div class="hero-copy" data-page-node-id="edr1a7GW6x0ZnlTGP99CB2">
+                <div class="eyebrow" data-page-node-id="2QR0kkG3LGRcwW1PGxMdHO">
+                    <i data-page-node-id="A3TgGyEAdzB8YyIFGeXizQ"></i>
                     NEXT POSSESSION. NEW POSSIBILITIES.
                 </div>
-                <h1>
-                    OWN THE<br>
-                    <em>MOMENT.</em>
-                    <span class="outline-word">26</span>
+                <h1 data-page-node-id="hiNCUTP3sbF2xxxbDst09Q">
+                    OWN THE<br data-page-node-id="HA4amnEXhqtPEVC13mJSjw">
+                    <em data-page-node-id="I0uSGxHe5Q0Bfh9YXxuEi3">MOMENT.</em>
+                    <span class="outline-word" data-page-node-id="NCF3wLUoudugezeCmP0p7C">26</span>
                 </h1>
-                <div class="hero-rule"></div>
-                <p class="hero-cn">每一回合，都是你的主场。</p>
-                <p class="hero-desc">
-                    真正的 3D 球场。十人攻防。完美出手。<br>踏上球场，让比赛说话。
+                <div class="hero-rule" data-page-node-id="j96Xffq9NSEVhNza81I81G"></div>
+                <p class="hero-cn" data-page-node-id="RCeQT1zgIb3vaMvXuFYPvW">每一回合，都是你的主场。</p>
+                <p class="hero-desc" data-page-node-id="X4vLGTXnmrG9N41BOIRanG">
+                    真正的 3D 球场。十人攻防。完美出手。<br data-page-node-id="xLnaO0O7R9a0TlsOQQQSdS">踏上球场，让比赛说话。
                 </p>
-                <div class="hero-tags">
-                    <span>
-                        5 <i>×</i>
+                <div class="hero-tags" data-page-node-id="rqDrl1y5o2VJgl8h1j8zKo">
+                    <span data-page-node-id="5TcBMRlBn0BMCKmXVR0SwY">
+                        5 <i data-page-node-id="Q8XCTuu2YgVIGcSXD01twv">×</i>
                         5
                     </span>
-                    <span>REAL-TIME 3D</span>
-                    <span>OFFLINE + P2P</span>
+                    <span data-page-node-id="dTs4l6xE9BYDq1ecwZxkUv">REAL-TIME 3D</span>
+                    <span data-page-node-id="8hMwg5ryV7DBOFkGunffIw">OFFLINE + P2P</span>
                 </div>
-                <button id="startBtn" class="primary start">
-                    <svg>
-                        <use href="#i-play"/>
+                <button id="startBtn" class="primary start" data-page-node-id="N04V9GWshm1iJWQ5BTYXDc">
+                    <svg data-page-node-id="GjALcYfpMYWD5LpFz6sm8V">
+                        <use href="#i-play" data-page-node-id="kO0I2D105R8FS3FCl64H0m"/>
                     </svg>
-                    <span id="startLabel">
-                        进入比赛<small>QUICK PLAY</small>
+                    <span id="startLabel" data-page-node-id="BAuFFtFGJNDi7F195Boq4G">
+                        进入比赛<small data-page-node-id="P1oaYHuln0uoIQtPnTZvCw">QUICK PLAY</small>
                     </span>
-                    <svg class="start-arrow">
-                        <use href="#i-arrow"/>
+                    <svg class="start-arrow" data-page-node-id="WM7EtqrQhSFqEEWG1BCdLf">
+                        <use href="#i-arrow" data-page-node-id="rcgav2azzJKFLbAG6KavZJ"/>
                     </svg>
                 </button>
-                <button id="homeHelp" class="text-btn">
-                    第一次来？查看操作指南 <span>↗</span>
+                <button id="homeHelp" class="text-btn" data-page-node-id="cWPXA0eXbxjcSUUDZ4YbED">
+                    第一次来？查看操作指南 <span data-page-node-id="MzcTPt7ioUFpBm1lZyOxJL">↗</span>
                 </button>
             </div>
-            <div class="home-right">
-                <div class="live-scene-label">
-                    <span class="red-dot"></span>
-                    LIVE ENGINE <span class="label-sep">/</span>
-                    COURTSIDE ARENA <span class="scene-num">01</span>
+            <div class="home-right" data-page-node-id="imzeQfIEPhXghcrgi7E2I0">
+                <div class="live-scene-label" data-page-node-id="spjr1l3tYWlROB6VYGnW9K">
+                    <span class="red-dot" data-page-node-id="vGiBhoEM2W6rEmYdKjmgdQ"></span>
+                    LIVE ENGINE <span class="label-sep" data-page-node-id="7USCiQ0esR38vE6cR8mCwu">/</span>
+                    COURTSIDE ARENA <span class="scene-num" data-page-node-id="cjAF9CCfv4VkwgQBXpeBBS">01</span>
                 </div>
-                <div class="match-card">
-                    <div class="section-label">
-                        <span id="matchLabel">TONIGHT'S MATCHUP</span>
-                        <span class="tiny-pill">EXHIBITION</span>
+                <div class="match-card" data-page-node-id="pWfElDG9oEiZVhWzyKDBdj">
+                    <div class="section-label" data-page-node-id="ZvaxEvORZQOtWQQtgHiQFD">
+                        <span id="matchLabel" data-page-node-id="s1XCyWqPmUSwOaRXldqzHe">TONIGHT'S MATCHUP</span>
+                        <span class="tiny-pill" data-page-node-id="9XGfmR5BydWUv9y2LW0rXM">EXHIBITION</span>
                     </div>
-                    <div class="match-teams">
-                        <div class="team-select">
-                            <div class="crest-wrap">
-                                <button id="homePrev" class="chev" aria-label="上一支主队">‹</button>
-                                <div id="homeCrest" class="crest">LA</div>
-                                <button id="homeNext" class="chev" aria-label="下一支主队">›</button>
+                    <div class="match-teams" data-page-node-id="FtRK7ylPUkS4sHqfXBMayk">
+                        <div class="team-select" data-page-node-id="NsGyXxpL7E6u2EkmXU1ae4">
+                            <div class="crest-wrap" data-page-node-id="cCkIH7xbE7YhMLoMurqeDY">
+                                <button id="homePrev" class="chev" aria-label="上一支主队" data-page-node-id="Yrg5TSMW0SqeaUSuqWbcGu">‹</button>
+                                <div id="homeCrest" class="crest" data-page-node-id="5JRMYiL3HmMURMIqkxYVFx">LA</div>
+                                <button id="homeNext" class="chev" aria-label="下一支主队" data-page-node-id="dlwAX5io6XNFbSLdcxp5Xn">›</button>
                             </div>
-                            <span id="homeCity" class="city">LOS ANGELES</span>
-                            <strong id="homeName">ROYALS</strong>
-                            <small>HOME · 你控制</small>
+                            <span id="homeCity" class="city" data-page-node-id="HJnZupGCtVXA2uaCUT5XCG">LOS ANGELES</span>
+                            <strong id="homeName" data-page-node-id="fM7Mq8IuFHDOcXC47C844B">ROYALS</strong>
+                            <small data-page-node-id="h5Bbbl5xAvJtDRHTPWdFf5">HOME · 你控制</small>
                         </div>
-                        <div class="versus">
-                            <span>VS</span>
-                            <i></i>
+                        <div class="versus" data-page-node-id="pRyq6YvCmEPVlp0GKnuyEC">
+                            <span data-page-node-id="Pjs1pnuuaLmUKdZ5mLCxAH">VS</span>
+                            <i data-page-node-id="JCRkZucBEB5mIqpAFjPuqO"></i>
                         </div>
-                        <div class="team-select">
-                            <div class="crest-wrap">
-                                <button id="awayPrev" class="chev" aria-label="上一支客队">‹</button>
-                                <div id="awayCrest" class="crest away">BW</div>
-                                <button id="awayNext" class="chev" aria-label="下一支客队">›</button>
+                        <div class="team-select" data-page-node-id="1qUcTiKCt9w6s0VpCMpyHI">
+                            <div class="crest-wrap" data-page-node-id="6Vh90XWWUoNnTgpNNj0VJQ">
+                                <button id="awayPrev" class="chev" aria-label="上一支客队" data-page-node-id="CvrErkLWlc2rZuOnb2ucFv">‹</button>
+                                <div id="awayCrest" class="crest away" data-page-node-id="0NexrZBA0EbXWirqL19Tvv">BW</div>
+                                <button id="awayNext" class="chev" aria-label="下一支客队" data-page-node-id="cJ0fkihf2nSv4Fuev7rT9i">›</button>
                             </div>
-                            <span id="awayCity" class="city">BAY CITY</span>
-                            <strong id="awayName">WAVES</strong>
-                            <small>AWAY · AI 对手</small>
+                            <span id="awayCity" class="city" data-page-node-id="v0scFVIGxgWz2LO4VJ0HLR">BAY CITY</span>
+                            <strong id="awayName" data-page-node-id="xNMD0xjnSFXzXDh9pOWeL8">WAVES</strong>
+                            <small data-page-node-id="VbH79ncP32DZFjgCYAUSCK">AWAY · AI 对手</small>
                         </div>
                     </div>
-                    <div class="match-configuration">
-                        <label>
-                            <span>比赛难度</span>
-                            <select id="difficulty">
-                                <option value="rookie">新秀 ROOKIE</option>
-                                <option value="pro" selected>职业 PRO</option>
-                                <option value="allstar">全明星 ALL-STAR</option>
+                    <div class="match-configuration" data-page-node-id="eDXxsSNiA7IrVew099LUlm">
+                        <label data-page-node-id="bUMmDcdlIYnw8lP5pzjld7">
+                            <span data-page-node-id="ReBrc8Q7dWOgzSxsXF0vUn">比赛难度</span>
+                            <select id="difficulty" data-page-node-id="RwXhJaXolv0MVDe2kno2D2">
+                                <option value="rookie" data-page-node-id="WHetsBZ8q0blpztPHk7YDX">新秀 ROOKIE</option>
+                                <option value="pro" selected data-page-node-id="ucBDAdXNMSe8AlQLRp4TS5">职业 PRO</option>
+                                <option value="allstar" data-page-node-id="jNtFEW6rVytfWRXJfsxmGx">全明星 ALL-STAR</option>
                             </select>
                         </label>
-                        <label>
-                            <span>每节时长</span>
-                            <select id="quarterLength">
-                                <option value="60">1 分钟 · 速战</option>
-                                <option value="120" selected>2 分钟 · 标准</option>
-                                <option value="180">3 分钟 · 长局</option>
-                                <option value="300">5 分钟 · 完整</option>
+                        <label data-page-node-id="9hquFjMIMsiocFjlIHPHbn">
+                            <span data-page-node-id="kUjGuRQC82ZhQGzVWcLDtz">每节时长</span>
+                            <select id="quarterLength" data-page-node-id="JuFOgEpAvxJriBm7Xo7rBf">
+                                <option value="60" data-page-node-id="dUX1BcJ667akZ5kUciRJkJ">1 分钟 · 速战</option>
+                                <option value="120" selected data-page-node-id="aJwOfm9NNnpHbEEaTUvvUj">2 分钟 · 标准</option>
+                                <option value="180" data-page-node-id="SYhY498s2HGkA08gcJrTCn">3 分钟 · 长局</option>
+                                <option value="300" data-page-node-id="iEAwqmzonTBfkD0EUlXBGj">5 分钟 · 完整</option>
                             </select>
                         </label>
                     </div>
-                    <div class="match-footer">
-                        <span>
-                            <i></i>
+                    <div class="match-footer" data-page-node-id="BaGEfFtHv04F9dCPkg53GY">
+                        <span data-page-node-id="98UhLXAZWdlCpcyOAsaoqc">
+                            <i data-page-node-id="KSreJOpyVUuK1Rd86oKCEt"></i>
                             4 节比赛 · 平局加时
                         </span>
-                        <span id="teamStyle">内外均衡 / 外线火力</span>
+                        <span id="teamStyle" data-page-node-id="R0eOBrFI0hd3QBZwx18Haa">内外均衡 / 外线火力</span>
                     </div>
                 </div>
-                <div class="scene-caption">
-                    <span>01 — THE HARDWOOD</span>
-                    <span>PROCEDURAL ARENA / NATIVE WEBGL</span>
+                <div class="scene-caption" data-page-node-id="JbCkiZ5DO1j43lj3U596wZ">
+                    <span data-page-node-id="3cedKx7kpq83dDGuMeYtkC">01 — THE HARDWOOD</span>
+                    <span data-page-node-id="gQDW4OTXL4sOUA5CdY8LYG">PROCEDURAL ARENA / NATIVE WEBGL</span>
                 </div>
             </div>
-            <footer class="home-footer">
-                <div>
-                    <kbd>W A S D</kbd>
-                    移动 <span>·</span>
-                    <kbd>SPACE</kbd>
-                    投篮 <span>·</span>
-                    <kbd>E</kbd>
+            <footer class="home-footer" data-page-node-id="vHQubQEn68JDkQbDwe3mLU">
+                <div data-page-node-id="QpEn5JTfnm96AdPJPREeKK">
+                    <kbd data-page-node-id="xhgoaXk4sHUW41bGiN405e">W A S D</kbd>
+                    移动 <span data-page-node-id="nXkOGwtdjjVc6CbwM6J1g8">·</span>
+                    <kbd data-page-node-id="4eKphiAPyQxD5MuJ7uw4L5">SPACE</kbd>
+                    投篮 <span data-page-node-id="915EPKZNJ3jlt6KCCIEueU">·</span>
+                    <kbd data-page-node-id="6Q92eDdiJu0QFG4gCU8qx8">E</kbd>
                     传球
                 </div>
-                <span>
-                    ORIGINAL BROWSER EDITION <b>/</b>
+                <span data-page-node-id="xqZNsQGo4AUEaHnF0NI8h4">
+                    ORIGINAL BROWSER EDITION <b data-page-node-id="JsE4JGbk64jBbFv8AGDktP">/</b>
                     26.02 / P2P
                 </span>
             </footer>
         </section>
-        <main id="networkLobby" hidden aria-label="好友联机大厅">
-            <div class="net-title-row">
-                <div><div class="net-kicker">COURTSIDE CONNECT / 26</div><h2>不止是你的主场。</h2><p class="net-subtitle">一人一队，一场真正的五对五。设备直连，没有游戏服务器。</p></div>
-                <div class="net-badge">WEBRTC / END-TO-END</div>
+        <main id="networkLobby" hidden aria-label="好友联机大厅" data-page-node-id="WFoO6PY00N8yJCb2abHFq7">
+            <div class="net-title-row" data-page-node-id="U42ED9T0FG2yxQ2wU3kBRK">
+                <div data-page-node-id="HQQGjjrVX7YI7uH5VTKDxZ"><div class="net-kicker" data-page-node-id="BmJBz7BvDeJKt5yfqD13bZ">COURTSIDE CONNECT / 26</div><h2 data-page-node-id="TJEa4iObqxkQd8pCevN6cF">不止是你的主场。</h2><p class="net-subtitle" data-page-node-id="STCdP2lRSi0U62KibK7yal">一人一队，一场真正的五对五。设备直连，没有游戏服务器。</p></div>
+                <div class="net-badge" data-page-node-id="UXq4Ny6JDNa1GVyfFYBXoB">WEBRTC / END-TO-END</div>
             </div>
-            <div class="net-scope" aria-label="网络场景">
-                <button data-scope="lan" class="active"><strong>局域网快连</strong><small>同一 Wi-Fi / 热点 · 扫码配对</small></button>
-                <button data-scope="wan"><strong>公网约战</strong><small>交换连接密钥 · 直连优先</small></button>
+            <div class="net-scope" aria-label="网络场景" data-page-node-id="oQpczhDEBElTfhSrlgr9d3">
+                <button data-scope="lan" class="active" data-page-node-id="4f2eQj57b3yFMOqOEiczx8"><strong data-page-node-id="kptlNC7qMHBGQwiQFkJffD">局域网快连</strong><small data-page-node-id="cTTy1luzZvpyKI3LLFSv00">同一 Wi-Fi / 热点 · 扫码配对</small></button>
+                <button data-scope="wan" data-page-node-id="mf7U9cwGMlNEXI93GPiE3U"><strong data-page-node-id="dvTMVzhXaFYTYrUwa611yK">公网约战</strong><small data-page-node-id="xCUwInXfuKOtadhSYGqW8O">交换连接密钥 · 直连优先</small></button>
             </div>
-            <div class="net-grid">
-                <div class="net-column">
-                    <section class="net-card">
-                        <div class="net-progress"><span id="netStep1" class="active"><b>1</b>建立房间</span><span id="netStep2"><b>2</b>配对连接</span><span id="netStep3"><b>3</b>准备开球</span></div>
-                        <div id="netStatus" role="status" aria-live="polite">选择创建或加入房间。</div>
-                        <div id="netRoleTabs" class="net-role-tabs"><button id="netHostTab" class="active">我来建房</button><button id="netGuestTab">加入好友</button></div>
-                        <div id="netSetup">
-                            <div class="net-card-head"><h3>今晚，你是主场。</h3><small>HOST</small></div>
-                            <p class="net-note">房主控制主队，好友控制客队。其余球员由 AI 配合。</p>
-                            <div class="net-fields">
-                                <label>主队球队<select id="netHomeTeam"></select></label><label>客队球队<select id="netAwayTeam"></select></label>
-                                <label>每节时长<select id="netQuarter"><option value="60">1 分钟</option><option value="120">2 分钟</option><option value="180">3 分钟</option><option value="300">5 分钟</option></select></label>
-                                <label>AI 强度<select id="netDifficulty"><option value="rookie">新秀</option><option value="pro">职业</option><option value="allstar">全明星</option></select></label>
+            <div class="net-grid" data-page-node-id="HHwJKAsimmrgCdsXhRCWy8">
+                <div class="net-column" data-page-node-id="8cfFRLHFIp8ANscUvF5uSc">
+                    <section class="net-card" data-page-node-id="xiAwa1Wl3l4KtjOiThJXtf">
+                        <div class="net-progress" data-page-node-id="CAT4OP97FHnkOOSdJ4Bh3g"><span id="netStep1" class="active" data-page-node-id="anpcfV9XrWhpExaty9fmIe"><b data-page-node-id="zANVDEXfIXv0LGzP8114Gj">1</b>建立房间</span><span id="netStep2" data-page-node-id="nUAF7803tIk6S7Dmp36vnB"><b data-page-node-id="O6vlHXKGA9W4RiGuaeCpa5">2</b>配对连接</span><span id="netStep3" data-page-node-id="cwgDJn5UybylEz1bb1a9og"><b data-page-node-id="i5PMFU8QdCSfrEQNZGFIAy">3</b>准备开球</span></div>
+                        <div id="netStatus" role="status" aria-live="polite" data-page-node-id="cVFovy3h3HyDZLdTKIYT0K">选择创建或加入房间。</div>
+                        <div id="netRoleTabs" class="net-role-tabs" data-page-node-id="2LY9Nbmikslyz8KKUIjeWi"><button id="netHostTab" class="active" data-page-node-id="bEfHs863Y6yDLy9gFgMTAT">我来建房</button><button id="netGuestTab" data-page-node-id="AL5GIrjK35ZhY4jsv5mmlw">加入好友</button></div>
+                        <div id="netSetup" data-page-node-id="20GKTxP7UctO6CJjHFH03Q">
+                            <div class="net-card-head" data-page-node-id="fMA6n48NYiLomJ33JUnnrx"><h3 data-page-node-id="ThRspbE8UiGgNNN0qXM1Qv">今晚，你是主场。</h3><small data-page-node-id="kItwPu2R8PgxxA3OsdzwUB">HOST</small></div>
+                            <p class="net-note" data-page-node-id="sdc4UnrEFpQdAFGn7AYSPq">房主控制主队，好友控制客队。其余球员由 AI 配合。</p>
+                            <div class="net-fields" data-page-node-id="DbfKF2rMLuTy2fmRITPJn0">
+                                <label data-page-node-id="UuVYNiwtHO4JgzLBIGR9gW">主队球队<select id="netHomeTeam" data-page-node-id="hbfpxbcbnRHocWN9cQIM8n"></select></label><label data-page-node-id="4nAbPMlTQZpXRRxBqX8eqD">客队球队<select id="netAwayTeam" data-page-node-id="DDmLZLZC4C5HZGp19DSeeH"></select></label>
+                                <label data-page-node-id="EGHEnTzrW7owEsTPrAqyku">每节时长<select id="netQuarter" data-page-node-id="92MI0UyVcai5XZeVSfmPuN"><option value="60" data-page-node-id="FWWUIcZuxZD8j7FkBC1AlJ">1 分钟</option><option value="120" data-page-node-id="jRJ8YBdxcnhoTFnKzV6D6n">2 分钟</option><option value="180" data-page-node-id="sRviJBhEkqoSZLvBzaSINz">3 分钟</option><option value="300" data-page-node-id="q64RPOvt6BUQh7ZGyUjN1G">5 分钟</option></select></label>
+                                <label data-page-node-id="BmQbnzvWF5Ecmc8khxQbrh">AI 强度<select id="netDifficulty" data-page-node-id="7DEDGciJetxtGSm5hBtqvP"><option value="rookie" data-page-node-id="9zaTzGF6D6n9IsvtZD44iA">新秀</option><option value="pro" data-page-node-id="DBP9SvrdbYuiB359JneDN9">职业</option><option value="allstar" data-page-node-id="W0OsNHE7UN8NHhXI9UCiKL">全明星</option></select></label>
                             </div>
-                            <button id="netCreate" class="primary net-primary">创建房间，生成邀请</button>
+                            <button id="netCreate" class="primary net-primary" data-page-node-id="wJEx6POJ8BmbDb81JECB3H">创建房间，生成邀请</button>
                         </div>
-                        <p id="netJoinIntro" class="net-copy" hidden>请房主先生成邀请密钥。你扫码或粘贴后，将自己的应答密钥返还给房主。</p>
-                        <div id="netOutgoing" class="net-exchange" hidden>
-                            <label class="net-input-label" for="netLocalKey" id="netLocalLabel">你的邀请密钥</label>
+                        <p id="netJoinIntro" class="net-copy" hidden data-page-node-id="4xE3pCtjyC7yA10hwPZwOi">请房主先生成邀请密钥。你扫码或粘贴后，将自己的应答密钥返还给房主。</p>
+                        <div id="netOutgoing" class="net-exchange" hidden data-page-node-id="bGpfB64gybOLeVDYuVDvWT">
+                            <label class="net-input-label" for="netLocalKey" id="netLocalLabel" data-page-node-id="OqmFq5J55jYUBO7bImC4yG">你的邀请密钥</label>
                             <textarea id="netLocalKey" readonly spellcheck="false" aria-label="本机连接密钥"></textarea>
-                            <div class="net-key-tools"><button id="netCopy">复制密钥</button><button id="netExport">导出密钥文件</button><button id="netQrToggle">显示二维码</button></div>
-                            <div id="netQrWrap" class="net-qr" hidden><canvas id="netQr" aria-label="离线生成的配对二维码"></canvas><p id="netQrInfo"></p></div>
-                            <p id="netKeyMeta" class="net-token-meta"></p>
+                            <div class="net-key-tools" data-page-node-id="9SoY0rkm9dOM6qxXjFebyn"><button id="netCopy" data-page-node-id="ZswnrFlNtjjtaGKpO5jXu1">复制密钥</button><button id="netExport" data-page-node-id="n4RDgViMdbbSvDcASVGlVB">导出密钥文件</button><button id="netQrToggle" data-page-node-id="taYuZ9EoFDCTa7lwmQMHcx">显示二维码</button></div>
+                            <div id="netQrWrap" class="net-qr" hidden data-page-node-id="flHXAeAgbpl29bCCOAgowe"><canvas id="netQr" aria-label="离线生成的配对二维码" data-page-node-id="uZi968zcIOzAuQHFKLL3uc"></canvas><p id="netQrInfo" data-page-node-id="DJtdirj5fFN3AikOnymp2A"></p></div>
+                            <p id="netKeyMeta" class="net-token-meta" data-page-node-id="32jMlWVDHJLfeS7lHpK0we"></p>
                         </div>
-                        <div id="netIncoming" class="net-exchange" hidden>
-                            <label class="net-input-label" for="netRemoteKey" id="netRemoteLabel">粘贴好友的邀请密钥</label>
+                        <div id="netIncoming" class="net-exchange" hidden data-page-node-id="ans32aua92wc5SnybYxqgu">
+                            <label class="net-input-label" for="netRemoteKey" id="netRemoteLabel" data-page-node-id="AvvdW6nOorqt7hdOUwNEjJ">粘贴好友的邀请密钥</label>
                             <textarea id="netRemoteKey" spellcheck="false" maxlength="60000" placeholder="CS26P1..." aria-label="好友的连接密钥"></textarea>
-                            <div class="net-button-row"><button id="netScan" class="secondary">扫码快速配对</button><button id="netImport" class="secondary">导入密钥文件</button></div>
-                            <button id="netApply" class="primary net-primary">读取邀请并生成应答</button>
-                            <input id="netFile" type="file" accept=".cs26,.txt,text/plain" hidden>
+                            <div class="net-button-row" data-page-node-id="qcjiaugOYBwQPKsuzHbV0Z"><button id="netScan" class="secondary" data-page-node-id="sNpjZmDIJmk9F6ZwJjIyyz">扫码快速配对</button><button id="netImport" class="secondary" data-page-node-id="riQ5K7QZYXzr0LzEUE6goX">导入密钥文件</button></div>
+                            <button id="netApply" class="primary net-primary" data-page-node-id="cIa6MKTEpEF7Bqu0Piv2Ts">读取邀请并生成应答</button>
+                            <input id="netFile" type="file" accept=".cs26,.txt,text/plain" hidden data-page-node-id="GZtu9uKDyGKIeusyAGfEvI">
                         </div>
-                        <div id="netScopeNote" class="net-warning"></div>
-                        <details class="net-details"><summary>为什么同一 Wi-Fi 还需要配对？</summary>
-                            <p>普通 HTML 页面没有 UDP 广播、组播或网卡嗅探权限，无法自动找到另一台设备的网页。扫码只交换一次连接信息；之后由 WebRTC 自动选择可用的直连路径。</p>
-                            <p>本页没有信令服务器、STUN、TURN、CDN 或外部接口。二维码在本地生成。密钥是 SDP / ICE 协商信息，不是你的加密私钥；仍请只发给要对战的好友。</p>
-                            <p>扫码需要浏览器支持 BarcodeDetector 和摄像头权限。不支持时使用复制或文件导入。密钥有效期 30 分钟，且生成密钥的页面必须保持打开。</p>
+                        <div id="netScopeNote" class="net-warning" data-page-node-id="a3tukqqufnCER6FSd5WLnD"></div>
+                        <details class="net-details" data-page-node-id="houFgWk9q1yH7MTjlILlB2"><summary data-page-node-id="rFcPQCxby5LIvjXSDUvSPv">为什么同一 Wi-Fi 还需要配对？</summary>
+                            <p data-page-node-id="9FrSNDpcS3RYATguMiAr2X">普通 HTML 页面没有 UDP 广播、组播或网卡嗅探权限，无法自动找到另一台设备的网页。扫码只交换一次连接信息；之后由 WebRTC 自动选择可用的直连路径。</p>
+                            <p data-page-node-id="JEGuP2QfCFez9YyaFOi1nQ">本页没有信令服务器、STUN、TURN、CDN 或外部接口。二维码在本地生成。密钥是 SDP / ICE 协商信息，不是你的加密私钥；仍请只发给要对战的好友。</p>
+                            <p data-page-node-id="uEieUifiOjEA72jQKl86VO">扫码需要浏览器支持 BarcodeDetector 和摄像头权限。不支持时使用复制或文件导入。密钥有效期 30 分钟，且生成密钥的页面必须保持打开。</p>
                         </details>
                     </section>
                 </div>
-                <div class="net-column">
-                    <section class="net-card">
-                        <div class="net-card-head"><h3>对战房间</h3><small id="netRoomId">NOT CONNECTED</small></div>
-                        <div class="net-players">
-                            <div class="net-player"><div class="net-crest" id="netHomeCrest"></div><strong id="netHomeName"></strong><small>HOME / 房主</small><span id="netHostReady" class="net-ready-state">等待建房</span></div>
-                            <div class="net-vs">VS</div>
-                            <div class="net-player"><div class="net-crest" id="netAwayCrest"></div><strong id="netAwayName"></strong><small>AWAY / 好友</small><span id="netGuestReady" class="net-ready-state">等待加入</span></div>
+                <div class="net-column" data-page-node-id="sYM50DKVh8TyRxLC15hVT4">
+                    <section class="net-card" data-page-node-id="1XE30KcZg0wz2EglHKpG75">
+                        <div class="net-card-head" data-page-node-id="7uxUQSk9Ewu2MFx6nlpFpG"><h3 data-page-node-id="gyu5cQQbDaqNfUQ7yiD8A2">对战房间</h3><small id="netRoomId" data-page-node-id="wpzQRhwIwQxhFp2VpSUWwy">NOT CONNECTED</small></div>
+                        <div class="net-players" data-page-node-id="EXzeLTfN773yZCLnEvHHnY">
+                            <div class="net-player" data-page-node-id="cSNJOmpLlkQNFl2fdk5qlx"><div class="net-crest" id="netHomeCrest" data-page-node-id="2tkQeHEGtZ6L68WkzAkGCH"></div><strong id="netHomeName" data-page-node-id="boVA2qfyZ0Ks0WSx7zu0t2"></strong><small data-page-node-id="DoM5D2xEYIjhSGvdHxMEN8">HOME / 房主</small><span id="netHostReady" class="net-ready-state" data-page-node-id="qz05byA7zpt1e2ANqkKjR0">等待建房</span></div>
+                            <div class="net-vs" data-page-node-id="1XxAPDkanRF6unZ8WxxjfX">VS</div>
+                            <div class="net-player" data-page-node-id="jgKT8tD9geDiXISiyGA22s"><div class="net-crest" id="netAwayCrest" data-page-node-id="9zvMlZh57HwaLArg8G25a8"></div><strong id="netAwayName" data-page-node-id="A0Zl6iPDXiJi9OuqllB6q9"></strong><small data-page-node-id="WDK0kANTXWHeU7rNy0vpxj">AWAY / 好友</small><span id="netGuestReady" class="net-ready-state" data-page-node-id="c3kOFVUZvEuSuRS1MMkF59">等待加入</span></div>
                         </div>
-                        <div id="netFingerprint" class="net-security" hidden><small>请双方核对此安全码</small><strong id="netSas">---- ---- ----</strong><p>两边应完全一致，确认后再点准备。不一致请断开。</p></div>
-                        <button id="netReady" class="secondary full" disabled>我已准备</button>
-                        <button id="netLaunch" class="primary net-primary" disabled>双方准备后开球</button>
-                        <div class="net-metrics"><div><b id="netRtt">--</b><small>RTT / ms</small></div><div><b id="netJitter">--</b><small>抖动 / ms</small></div><div><b id="netGap">--</b><small>快照缺口 / %</small></div></div>
-                        <div class="net-room-meta"><span id="netPath">未连接</span><span>60 Hz SIM / 30 Hz SYNC</span></div>
+                        <div id="netFingerprint" class="net-security" hidden data-page-node-id="bHvk5iGT4j4UzQGIMiVUhs"><small data-page-node-id="vwvKZDdwrL6DrikODfWONT">请双方核对此安全码</small><strong id="netSas" data-page-node-id="IhWwvDwS5K21KKe5ziE2A2">---- ---- ----</strong><p data-page-node-id="SPtO4RN7hJZYec7BNTD1ug">两边应完全一致，确认后再点准备。不一致请断开。</p></div>
+                        <button id="netReady" class="secondary full" disabled data-page-node-id="txYRRbqXccD0Wp1dPdLPAE">我已准备</button>
+                        <button id="netLaunch" class="primary net-primary" disabled data-page-node-id="EUF8hgt5vrTZiPxP6ICfxs">双方准备后开球</button>
+                        <div class="net-metrics" data-page-node-id="vy9I1RN9vba4qGB5yF7q3M"><div data-page-node-id="bVKgGFHbp4gBU4lPJ5YMGL"><b id="netRtt" data-page-node-id="PUv6njDvqjYIFA8UVtOiG8">--</b><small data-page-node-id="HcM0DbtCNayeApi0C4JFvU">RTT / ms</small></div><div data-page-node-id="N6WAupwQC9E6HeF9o18vwB"><b id="netJitter" data-page-node-id="vbLgvajPt4qpFDsbZSfqjh">--</b><small data-page-node-id="lTvvQ0PHc8SKBGDaK1K0lR">抖动 / ms</small></div><div data-page-node-id="ImqiK0SQUaMIBZcBNWLTDT"><b id="netGap" data-page-node-id="ZH5TMEp2l9EujX7pgZ84EI">--</b><small data-page-node-id="ZbCi2EtCUnwOcwmeOE2L17">快照缺口 / %</small></div></div>
+                        <div class="net-room-meta" data-page-node-id="pZsfHXY1CSDCkmkBfWKeaU"><span id="netPath" data-page-node-id="urnKfGdTputw7htku0cKli">未连接</span><span data-page-node-id="zCTOHfztmxnb4YtpwXaOa8">60 Hz SIM / 30 Hz SYNC</span></div>
                     </section>
-                    <section id="netDiscoveryCard" class="net-card">
-                        <div class="net-card-head"><h3 class="net-mini-title">本机房间自动发现</h3><small>LOCAL TABS ONLY</small></div>
-                        <p class="net-note">仅同一浏览器、同源标签页。这不是跨设备的局域网扫描。</p>
-                        <div id="netNearby" class="net-nearby"></div><p id="netDiscoveryHint" class="net-note"></p>
-                        <label class="net-auto"><input id="netAutoJoin" type="checkbox">自动加入唯一的本机房间</label>
+                    <section id="netDiscoveryCard" class="net-card" data-page-node-id="CCr3joY4bogEaPpLhsZthy">
+                        <div class="net-card-head" data-page-node-id="kZfMabKFFqHrV0DHzKD7vX"><h3 class="net-mini-title" data-page-node-id="CI2XUUpdLnWmWTMcyozqtR">本机房间自动发现</h3><small data-page-node-id="TqwIMDMDKlgsdCcpKTTo1T">LOCAL TABS ONLY</small></div>
+                        <p class="net-note" data-page-node-id="2D91gdZF7B8jBGfBtN0vED">仅同一浏览器、同源标签页。这不是跨设备的局域网扫描。</p>
+                        <div id="netNearby" class="net-nearby" data-page-node-id="7qM6yaqxEVbOr5NlbFH3eY"></div><p id="netDiscoveryHint" class="net-note" data-page-node-id="ZRXTLmAl6Z0eZTg7sxEFIz"></p>
+                        <label class="net-auto" data-page-node-id="xiVGn2KWhP9GQlNWDBlBR3"><input id="netAutoJoin" type="checkbox" data-page-node-id="226kyJJJmq1AfNnQ3gaat8">自动加入唯一的本机房间</label>
                     </section>
-                    <section class="net-card">
-                        <div class="net-card-head"><h3 class="net-mini-title">直连诊断</h3><small id="netCapability">CHECKING</small></div>
-                        <p id="netDiagnosis" class="net-note"></p>
-                        <details class="net-details"><summary>连接日志与故障排查</summary><pre id="netLog"></pre><p>同网不通：检查访客 Wi-Fi / AP 隔离、系统防火墙、浏览器本地网络权限。公网不通：可能是 NAT 或防火墙阻挡；单纯重复交换密钥不能绕过它。</p><button id="netReport" class="secondary full">导出诊断（不含密钥）</button></details>
+                    <section class="net-card" data-page-node-id="9uEZrluWSyJnb4UzrK0NbV">
+                        <div class="net-card-head" data-page-node-id="XZ3ejzupJxqy8CCnC5X6wJ"><h3 class="net-mini-title" data-page-node-id="5rr5oZLjkD9tDDYNJHRpN7">直连诊断</h3><small id="netCapability" data-page-node-id="hiY4LFod4OzFWduHMoVleH">CHECKING</small></div>
+                        <p id="netDiagnosis" class="net-note" data-page-node-id="asqyIDsF6odGis5KJEXm0J"></p>
+                        <details class="net-details" data-page-node-id="sWidWVb0bYMKayvU6c7xEy"><summary data-page-node-id="LTb0qlLw9x0xGUU8JZ9m6x">连接日志与故障排查</summary><pre id="netLog" data-page-node-id="eHSohBYwBfrViPw2RNxeHB"></pre><p data-page-node-id="k1jDvqhtwgSj3oKRhjn9hg">同网不通：检查访客 Wi-Fi / AP 隔离、系统防火墙、浏览器本地网络权限。公网不通：可能是 NAT 或防火墙阻挡；单纯重复交换密钥不能绕过它。</p><button id="netReport" class="secondary full" data-page-node-id="Y8252Yp02Hkv4FUCpwBeG8">导出诊断（不含密钥）</button></details>
                     </section>
                 </div>
             </div>
-            <div class="net-footer"><span>零外部服务 · 房主权威模拟 · 客机移动预测 · 端到端加密</span><button id="netLeave">清除配对 / 离开房间</button></div>
+            <div class="net-footer" data-page-node-id="gEY88jD9ZdCcgwGT3c7SsL"><span data-page-node-id="SKaP1ecnp2d6rdbMx67QPO">零外部服务 · 房主权威模拟 · 客机移动预测 · 端到端加密</span><button id="netLeave" data-page-node-id="01ICBc3B8y4QGcAnSFarkg">清除配对 / 离开房间</button></div>
         </main>
-        <div id="netScanner" class="net-scanner" hidden role="dialog" aria-modal="true" aria-labelledby="netScanTitle"><h3 id="netScanTitle">扫描好友的配对码</h3><video id="netVideo" autoplay playsinline muted></video><p id="netScanHint">将完整二维码置于镜头前。图像仅在本地处理。</p><button id="netStopScan" class="secondary">关闭摄像头</button></div>
-        <div id="netInterrupted" class="net-disconnect" hidden role="alertdialog" aria-modal="true"><section><h3>连接中断，比赛已冻结。</h3><p id="netInterruptedText">正在等待原连接恢复。不会自动让 AI 接管或各自继续计分。</p><button id="netBackLobby" class="primary net-primary">结束此局，返回配对</button></section></div>
+        <div id="netScanner" class="net-scanner" hidden role="dialog" aria-modal="true" aria-labelledby="netScanTitle" data-page-node-id="kefxknES2b2FTEVNfG0Ti8"><h3 id="netScanTitle" data-page-node-id="2WUSJHifgH1XUhUYsEZ40l">扫描好友的配对码</h3><video id="netVideo" autoplay playsinline muted data-page-node-id="TO9fkeKo4nCTqETQXPoESv"></video><p id="netScanHint" data-page-node-id="pZr1vXfAcFtR6IAjCVa3NG">将完整二维码置于镜头前。图像仅在本地处理。</p><button id="netStopScan" class="secondary" data-page-node-id="4is0SkxXFcAehcOQvPlMY3">关闭摄像头</button></div>
+        <div id="netInterrupted" class="net-disconnect" hidden role="alertdialog" aria-modal="true" data-page-node-id="cbC69bdYE4PxWY2PSOOb4v"><section data-page-node-id="TD0XxQ1BgjpK9deD3rJsa7"><h3 data-page-node-id="rcHPj8HGyqBuhAAsRCDSj4">连接中断，比赛已冻结。</h3><p id="netInterruptedText" data-page-node-id="GAyP3VEK6oPaiUkbpJTGTv">正在等待原连接恢复。不会自动让 AI 接管或各自继续计分。</p><button id="netBackLobby" class="primary net-primary" data-page-node-id="EiwmN8azOZJ6ZBZBp3tMyu">结束此局，返回配对</button></section></div>
 
-        <div id="hud" hidden>
-            <div id="netHud" class="net-hud" hidden role="status"><i></i><strong id="netHudRole">P2P</strong><span id="netHudText"></span></div>
-            <div class="arena-label">
-                <span>COURTSIDE ARENA</span>
-                <small id="modeTag">EXHIBITION · 5 ON 5</small>
+        <div id="hud" hidden data-page-node-id="vrHfcCNEbKDwAqhsraULQ1">
+            <div id="netHud" class="net-hud" hidden role="status" data-page-node-id="8xFDniGqBiYeE4rJMkH1aj"><i data-page-node-id="L7xjaXciSl6nfaXJEZ6rsn"></i><strong id="netHudRole" data-page-node-id="FNGzwbWVUUe6PDOYeKtbPX">P2P</strong><span id="netHudText" data-page-node-id="2W8x7uAsbhqFoA1UE8zMzA"></span></div>
+            <div class="arena-label" data-page-node-id="yVaq9aX5zWYavoGDxkvcW2">
+                <span data-page-node-id="1O1Ehy8MCDSW04cBGpAxYX">COURTSIDE ARENA</span>
+                <small id="modeTag" data-page-node-id="1bSJxdD9zLowDVEz0danLi">EXHIBITION · 5 ON 5</small>
             </div>
-            <div class="scoreboard">
-                <div class="score-team home-score">
-                    <div id="scoreHomeLogo" class="score-logo">LA</div>
-                    <div class="score-names">
-                        <strong id="scoreHomeAbbr">LA</strong>
-                        <span id="homePoss">● HOME</span>
+            <div class="scoreboard" data-page-node-id="jkY2EUXs5fC6fnXpDyplhy">
+                <div class="score-team home-score" data-page-node-id="Os3HObY5saXWVCGgzbYu0Y">
+                    <div id="scoreHomeLogo" class="score-logo" data-page-node-id="cL9364TLZLPSrKUyU5VaUJ">LA</div>
+                    <div class="score-names" data-page-node-id="T6Wn5fZO71fuqqjsxTZ4nc">
+                        <strong id="scoreHomeAbbr" data-page-node-id="EGh28tuUAYYADnEGIseC6d">LA</strong>
+                        <span id="homePoss" data-page-node-id="B7kVFkHEU3gNVSu9CHFvvY">● HOME</span>
                     </div>
-                    <b id="homeScore">0</b>
+                    <b id="homeScore" data-page-node-id="AzcZPRcNBl5aHQKJ9PTaLi">0</b>
                 </div>
-                <div class="score-center">
-                    <div>
-                        <strong id="gameClock">2:00</strong>
-                        <span id="shotClock">24</span>
+                <div class="score-center" data-page-node-id="m0uocGbucbZIkBtxB5pBjo">
+                    <div data-page-node-id="VhuAgj7EhaxhrsTlkaBBip">
+                        <strong id="gameClock" data-page-node-id="iSC3cukgYLqr4xw2arn677">2:00</strong>
+                        <span id="shotClock" data-page-node-id="HmLfvpEwsvqRM4yCKaagMx">24</span>
                     </div>
-                    <small>
-                        <span id="period">1ST</span>
-                        <i></i>
-                        <span id="periodDesc">QUARTER</span>
+                    <small data-page-node-id="rYkJQsLFirRdNQCMXAwgta">
+                        <span id="period" data-page-node-id="d5iZm1Hsfb2NG3kKIDadzn">1ST</span>
+                        <i data-page-node-id="NWdy0onSlF0dP9pTOnKzG2"></i>
+                        <span id="periodDesc" data-page-node-id="lGFWe8KiiMS15PZVgAMDNC">QUARTER</span>
                     </small>
                 </div>
-                <div class="score-team away-score">
-                    <b id="awayScore">0</b>
-                    <div class="score-names">
-                        <strong id="scoreAwayAbbr">BAY</strong>
-                        <span id="awayPoss">AWAY</span>
+                <div class="score-team away-score" data-page-node-id="3A2Aq2v5sQrOL7XbphlFXd">
+                    <b id="awayScore" data-page-node-id="hpUbIeWUbKrVVjcoNFBrH6">0</b>
+                    <div class="score-names" data-page-node-id="n50jGuEyXHbxWW4eFiBbLM">
+                        <strong id="scoreAwayAbbr" data-page-node-id="MeLBpkBOH63x2w1mIJhVMg">BAY</strong>
+                        <span id="awayPoss" data-page-node-id="QdjO18XZdtbL5mSmxFmiAm">AWAY</span>
                     </div>
-                    <div id="scoreAwayLogo" class="score-logo">BW</div>
+                    <div id="scoreAwayLogo" class="score-logo" data-page-node-id="tdJS6SBpDmy2cugaE0Lly4">BW</div>
                 </div>
             </div>
-            <button id="cameraBtn" class="camera-tag">
-                <svg>
-                    <use href="#i-camera"/>
+            <button id="cameraBtn" class="camera-tag" data-page-node-id="kXWYIQv3F6zzEKtEGTntdH">
+                <svg data-page-node-id="WZQyXBTJ3EYa6jFSH3phep">
+                    <use href="#i-camera" data-page-node-id="zA8wVEBwiLGc6JFFfrc9ja"/>
                 </svg>
-                <span id="cameraName">转播视角</span>
-                <kbd>C</kbd>
+                <span id="cameraName" data-page-node-id="bJ8madY3LxnCxzEwnF9gDm">转播视角</span>
+                <kbd data-page-node-id="9FAanRdztXQuYSdnDh5KO2">C</kbd>
             </button>
-            <div id="practiceHud" hidden>
-                <span>SHOOTAROUND</span>
-                <strong id="practiceRatio">0 / 0</strong>
-                <small id="practiceStats">命中率 0% · 连中 0 · 最佳 0</small>
+            <div id="practiceHud" hidden data-page-node-id="Y09wgFYc6g6MSGIzaxI2jP">
+                <span data-page-node-id="zLkODabF4aWTYHOgTIGpRW">SHOOTAROUND</span>
+                <strong id="practiceRatio" data-page-node-id="VGO7ptImyfMdPp6pLGfNyY">0 / 0</strong>
+                <small id="practiceStats" data-page-node-id="FBON2jIYvbQUmRo2f9Dkio">命中率 0% · 连中 0 · 最佳 0</small>
             </div>
-            <div id="playerLabels"></div>
-            <div id="shotMeter" hidden>
-                <div class="meter-top">
-                    <span id="meterGrade">释放时机</span>
-                    <b id="meterValue">0%</b>
+            <div id="playerLabels" data-page-node-id="OYTAKA20jNGpzfwEO3EFkr"></div>
+            <div id="shotMeter" hidden data-page-node-id="9MFkC8z8DHpEQyzL3XhoPs">
+                <div class="meter-top" data-page-node-id="KEPEpBRPGWwPtxeBEDMujs">
+                    <span id="meterGrade" data-page-node-id="unVBEiM56GV1oI5ijFXKYX">释放时机</span>
+                    <b id="meterValue" data-page-node-id="zD4kgrngsSJfG5D5b5nSTe">0%</b>
                 </div>
-                <div class="meter-track">
-                    <div class="meter-fill" id="meterFill"></div>
-                    <div class="green-zone" id="greenZone"></div>
-                    <div class="meter-needle" id="meterNeedle"></div>
+                <div class="meter-track" data-page-node-id="00Syj9MI6ZC1tWD2PRvIJX">
+                    <div class="meter-fill" id="meterFill" data-page-node-id="kgCzzdGAE1z1MMnh0gDV33"></div>
+                    <div class="green-zone" id="greenZone" data-page-node-id="jqKpcu56WYcfXvk4SZjHDS"></div>
+                    <div class="meter-needle" id="meterNeedle" data-page-node-id="2Wt9MxYQfun0uQOmMBdulG"></div>
                 </div>
-                <span class="meter-hint">在绿色区间松开 SPACE</span>
+                <span class="meter-hint" data-page-node-id="Eec2NBUMFdE61S5y1t9s4A">在绿色区间松开 SPACE</span>
             </div>
-            <div id="feedback" class="feedback">
-                <div id="feedbackTitle"></div>
-                <span id="feedbackSub"></span>
+            <div id="feedback" class="feedback" data-page-node-id="bs6sYeOkPKlQWeMRkiA4Iv">
+                <div id="feedbackTitle" data-page-node-id="974jefbRsjrwwFSBwlzCJo"></div>
+                <span id="feedbackSub" data-page-node-id="W9j1deooF3ujEJBrPDgSN7"></span>
             </div>
-            <div id="banner" class="banner">
-                <div id="bannerKicker">COURTSIDE / 26</div>
-                <strong id="bannerTitle">MAKE IT COUNT</strong>
-                <span id="bannerSub"></span>
+            <div id="banner" class="banner" data-page-node-id="maZyehubH1kFS7wX0P9eUf">
+                <div id="bannerKicker" data-page-node-id="pnrphDZKB5GbRfJLBAAsJb">COURTSIDE / 26</div>
+                <strong id="bannerTitle" data-page-node-id="RBv4CCAyq0fUarg6qWWSMy">MAKE IT COUNT</strong>
+                <span id="bannerSub" data-page-node-id="xvFuNY88lUHm4G0lKEkJUJ"></span>
             </div>
-            <div id="toast" class="toast"></div>
-            <div id="eventFeed" class="event-feed"></div>
-            <div id="playerCard" class="player-card">
-                <div class="player-card-top">
-                    <div class="player-num" id="playerNumber">3</div>
-                    <div class="player-info">
-                        <div class="player-role">
-                            <span id="playerPosition">PG</span>
-                            <i></i>
-                            <span id="offenseState">ON OFFENSE</span>
+            <div id="toast" class="toast" data-page-node-id="5twg8gUkWn8DEwrIhLUS7V"></div>
+            <div id="eventFeed" class="event-feed" data-page-node-id="yj1wJYwRCWGRmuRHiO4HCK"></div>
+            <div id="playerCard" class="player-card" data-page-node-id="kgb1Hk0vczAUnN33v3jSMA">
+                <div class="player-card-top" data-page-node-id="My2vjZau42cmeMaqBlzCta">
+                    <div class="player-num" id="playerNumber" data-page-node-id="GDVH6XhXER4ayCzCFMCuF7">3</div>
+                    <div class="player-info" data-page-node-id="bxJAkOp91gwuiqs1ZqtiXv">
+                        <div class="player-role" data-page-node-id="BW84zGEvDHIDJbW5FKPIXu">
+                            <span id="playerPosition" data-page-node-id="eKiheDN9irsym4TtGegXkN">PG</span>
+                            <i data-page-node-id="gO2EyD7Ve9YP9eBffgpim7"></i>
+                            <span id="offenseState" data-page-node-id="p4k2jAhn13tOMyoAeuejKA">ON OFFENSE</span>
                         </div>
-                        <strong id="playerName">J. CARTER</strong>
-                        <span id="playerChinese">卡特 · 控球后卫</span>
+                        <strong id="playerName" data-page-node-id="DOSU3EcOEUUAre7pffbBmm">J. CARTER</strong>
+                        <span id="playerChinese" data-page-node-id="UpgccsnJ3zttu7FwQ40frj">卡特 · 控球后卫</span>
                     </div>
-                    <div class="ovr">
-                        <span>OVR</span>
-                        <b id="playerOverall">91</b>
+                    <div class="ovr" data-page-node-id="g8kvJj2Lcfnba8VtvYsbKD">
+                        <span data-page-node-id="qS0hO9HbNyzUG6p50moDoq">OVR</span>
+                        <b id="playerOverall" data-page-node-id="PHjO78Aem5tFsKpFM4cMtq">91</b>
                     </div>
                 </div>
-                <div class="stamina-row">
-                    <span>体力</span>
-                    <div class="stamina-track">
-                        <i id="staminaFill"></i>
+                <div class="stamina-row" data-page-node-id="rMKLDu8jG8wwxhaC0Mz2rq">
+                    <span data-page-node-id="5Xm4GznlzdVGJvvfmXbV3C">体力</span>
+                    <div class="stamina-track" data-page-node-id="hdb99jdGGDrH0tPqFnaMVi">
+                        <i id="staminaFill" data-page-node-id="EkCKZMg7GO2IO1gPkFCvRO"></i>
                     </div>
-                    <b id="staminaNumber">100</b>
+                    <b id="staminaNumber" data-page-node-id="YjGf6eSJ1Cb5CLj0S7syGA">100</b>
                 </div>
-                <div class="player-stats">
-                    <span>
-                        <b id="statPts">0</b>
+                <div class="player-stats" data-page-node-id="QVti2NqCxugCO0T7nRVSvp">
+                    <span data-page-node-id="qukJDsUb2OkwTGCEVlMTLZ">
+                        <b id="statPts" data-page-node-id="RMOK6qamJNDrEYfX77fuRm">0</b>
                         PTS
                     </span>
-                    <span>
-                        <b id="statReb">0</b>
+                    <span data-page-node-id="Ggo6cMs2wYXTIf5m0lLdqx">
+                        <b id="statReb" data-page-node-id="vfGImDJmATriiM6niEQwq8">0</b>
                         REB
                     </span>
-                    <span>
-                        <b id="statAst">0</b>
+                    <span data-page-node-id="zh38WSwEC2bgmDE56wFFPg">
+                        <b id="statAst" data-page-node-id="4S08UyoHlX2e3fKWF0Rxbq">0</b>
                         AST
                     </span>
-                    <span>
-                        <b id="statFg">0/0</b>
+                    <span data-page-node-id="QjLrXVmolBI7EQq1dkUQiv">
+                        <b id="statFg" data-page-node-id="d1tTF6EN0rexQnCTgfBQkn">0/0</b>
                         FG
                     </span>
                 </div>
             </div>
-            <div class="minimap-wrap">
-                <div class="mini-label">
-                    <span>FLOOR MAP</span>
-                    <span id="attackDirection">进攻方向 →</span>
+            <div class="minimap-wrap" data-page-node-id="5AbLiaO1sdbCFYFLaAtDoG">
+                <div class="mini-label" data-page-node-id="jQHAaHaiKLeaxWUqpc2nbk">
+                    <span data-page-node-id="Qe0UNa3qcypjelpFxyiNqw">FLOOR MAP</span>
+                    <span id="attackDirection" data-page-node-id="UYBEeYcCTT2nabYHZCNi7k">进攻方向 →</span>
                 </div>
-                <canvas id="minimap" width="400" height="220"></canvas>
+                <canvas id="minimap" width="400" height="220" data-page-node-id="azXlKZDhAontxhMT7UDyAj"></canvas>
             </div>
-            <div id="controlsHint" class="controls-hint">
-                <div>
-                    <kbd>WASD</kbd>
-                    <span>移动</span>
-                    <kbd>SHIFT</kbd>
-                    <span>加速</span>
+            <div id="controlsHint" class="controls-hint" data-page-node-id="CXrxMeLTpsv0YAxQRIhuRe">
+                <div data-page-node-id="Th15ooGAvX8SqPR04h8NGH">
+                    <kbd data-page-node-id="X6QAVS8YKRn0KnyciOjSGt">WASD</kbd>
+                    <span data-page-node-id="TthDBXw7IFyEtXDygNwAB7">移动</span>
+                    <kbd data-page-node-id="81OWOa9mfFA5kFAVz9X8zG">SHIFT</kbd>
+                    <span data-page-node-id="MVj3uO4uriWw7MCZhH5vzL">加速</span>
                 </div>
-                <div>
-                    <kbd>SPACE</kbd>
-                    <span id="shootHint">按住 / 松开投篮</span>
+                <div data-page-node-id="Pp3aJ6xbQK6EDMCVGEObZp">
+                    <kbd data-page-node-id="zedeRzZrFCH3O2z5bULyvq">SPACE</kbd>
+                    <span id="shootHint" data-page-node-id="YeFpeFqAILzv8PmHvRTgRU">按住 / 松开投篮</span>
                 </div>
-                <div>
-                    <kbd>E</kbd>
-                    <span id="passHint">传球</span>
-                    <kbd>Q</kbd>
-                    <span id="crossHint">变向</span>
-                    <kbd>X</kbd>
-                    <span>扣篮</span>
+                <div data-page-node-id="jFBRGVlaGlTiUonhGuCFEW">
+                    <kbd data-page-node-id="HSFLQsvBREy0rt6KanbzsO">E</kbd>
+                    <span id="passHint" data-page-node-id="NWJHE1LTOCFGtn6f2WH4ar">传球</span>
+                    <kbd data-page-node-id="hIn6QchqRt4EA19nanWKyi">Q</kbd>
+                    <span id="crossHint" data-page-node-id="PVYChotY6DNKXWfVBzEFQU">变向</span>
+                    <kbd data-page-node-id="OF68qlYeX3bwPBLFeEQAde">X</kbd>
+                    <span data-page-node-id="AGApoUDqSVe0fxQpXcnzeR">扣篮</span>
                 </div>
-                <small>
-                    <kbd>F</kbd>
-                    挡拆 <kbd>R</kbd>
-                    回放 <kbd>TAB</kbd>
+                <small data-page-node-id="d5y02XimNDsUPUFksNRLG6">
+                    <kbd data-page-node-id="AshGgC1Q0yqZyKQX7psXRq">F</kbd>
+                    挡拆 <kbd data-page-node-id="gb2cKSuHG1jkNAHGdWqpC5">R</kbd>
+                    回放 <kbd data-page-node-id="JFafrajOWjcOap2j3rpTkN">TAB</kbd>
                     数据
                 </small>
             </div>
-            <div id="lastShot" class="last-shot" hidden>
-                <div>SHOT FEEDBACK</div>
-                <strong id="shotReleaseLabel">完美释放</strong>
-                <span id="shotCoverage">空位 · 7.2 米</span>
+            <div id="lastShot" class="last-shot" hidden data-page-node-id="2k38qTbXwhNRa1fGv707fx">
+                <div data-page-node-id="TYAKl0Wu8ZOQw8CyAryn8m">SHOT FEEDBACK</div>
+                <strong id="shotReleaseLabel" data-page-node-id="eGGIriCwEsAssEU8VXfhJ1">完美释放</strong>
+                <span id="shotCoverage" data-page-node-id="F5CtHn7TpPqeFusbibEGgo">空位 · 7.2 米</span>
             </div>
-            <div class="bottom-stripe">
-                <span id="sessionHint">找空位，控节奏。绿色出手更容易命中。</span>
-                <span id="fpsLabel">LOCAL / 60 FPS</span>
+            <div class="bottom-stripe" data-page-node-id="eMlFbXTF1QgrMOkAekScxe">
+                <span id="sessionHint" data-page-node-id="1TvBaW1Zj3GfqW84Pn7OpW">找空位，控节奏。绿色出手更容易命中。</span>
+                <span id="fpsLabel" data-page-node-id="NVGAYIVKPZRDdZFfXfIpKP">LOCAL / 60 FPS</span>
             </div>
         </div>
-        <div id="replayHud" hidden>
-            <div class="replay-top">
-                <span>
-                    <i></i>
+        <div id="replayHud" hidden data-page-node-id="dwub9rZqOOTvcpHAwNvqWD">
+            <div class="replay-top" data-page-node-id="5FaNztuEwHOWiXIoABepp9">
+                <span data-page-node-id="99PkrkoFGORsDC4ebCofub">
+                    <i data-page-node-id="r1dqMfHCgycdlKDzjGMxCF"></i>
                     INSTANT REPLAY
                 </span>
-                <small>0.54× SLOW MOTION</small>
+                <small data-page-node-id="DLOBLAITRWNBZAmxBU4Y1V">0.54× SLOW MOTION</small>
             </div>
-            <div class="replay-bottom">
-                <div>
-                    <b>THE MOMENT.</b>
-                    <span>精彩瞬间 · 本地实时回放</span>
+            <div class="replay-bottom" data-page-node-id="7qbx2h3N7Rs7EuQNIc3xGR">
+                <div data-page-node-id="eoMhktfYRpHmVDCx2z5qar">
+                    <b data-page-node-id="tvavRhRBoC6siUHZ55EB83">THE MOMENT.</b>
+                    <span data-page-node-id="UPHKFtCmbrblEw9ssDU9A1">精彩瞬间 · 本地实时回放</span>
                 </div>
-                <div class="replay-progress">
-                    <i id="replayProgress"></i>
+                <div class="replay-progress" data-page-node-id="WtOezS8THsFSwsR6UAkFfB">
+                    <i id="replayProgress" data-page-node-id="Mi28vQEmGIIu9YZ2qzDBm6"></i>
                 </div>
-                <button id="skipReplay" class="text-btn">
-                    返回比赛 <kbd>R</kbd>
+                <button id="skipReplay" class="text-btn" data-page-node-id="BsCPzjs1n6sMwLClQHTb69">
+                    返回比赛 <kbd data-page-node-id="t4gti12fOX8GET6J9X37ik">R</kbd>
                 </button>
             </div>
         </div>
-        <div id="modalBackdrop" hidden>
-            <section id="pausePanel" class="modal-panel" hidden>
-                <div class="modal-kicker">TAKE A BREATHER.</div>
-                <h2>
-                    TIME OUT<span>比赛暂停</span>
+        <div id="modalBackdrop" hidden data-page-node-id="bNVFtlcdUrUupudAX2IAZu">
+            <section id="pausePanel" class="modal-panel" hidden data-page-node-id="lLFuQflhjM7zcWfHUHsDsJ">
+                <div class="modal-kicker" data-page-node-id="4Cg8Mv6DCmjSuffo2NhzBa">TAKE A BREATHER.</div>
+                <h2 data-page-node-id="oelIZCJcMv3713FSBs0fv2">
+                    TIME OUT<span data-page-node-id="6XPmeyYPw3jAq7W3YQl65C">比赛暂停</span>
                 </h2>
-                <div class="pause-scores" id="pauseScores">LA 0 — 0 BAY</div>
-                <button class="primary full" id="resumeBtn">
+                <div class="pause-scores" id="pauseScores" data-page-node-id="iqCj4JP8vJC0pkaxHbdDD1">LA 0 — 0 BAY</div>
+                <button class="primary full" id="resumeBtn" data-page-node-id="D0OC2z4BQhBJF5DKi28kUu">
                     继续比赛 
-                    <svg>
-                        <use href="#i-arrow"/>
+                    <svg data-page-node-id="fQneFmtkFRdPiPCad5yJRo">
+                        <use href="#i-arrow" data-page-node-id="0liz5WUrXbIDSjt9bZZRCb"/>
                     </svg>
                 </button>
-                <div class="pause-settings">
-                    <label>
+                <div class="pause-settings" data-page-node-id="8McQEG5dIvAGiOS1SLxXcL">
+                    <label data-page-node-id="juaoBUVnrXho49HdIDHPAx">
                         镜头
-                        <select id="cameraSelect">
-                            <option value="0">转播视角</option>
-                            <option value="1">2K 跟随</option>
-                            <option value="2">边线视角</option>
-                            <option value="3">全场战术</option>
+                        <select id="cameraSelect" data-page-node-id="HHlhhR5cW8cESyO6ApX46R">
+                            <option value="0" data-page-node-id="TKg2hrnYOLHmVznNmrwzQa">转播视角</option>
+                            <option value="1" data-page-node-id="tOzyMsUzSJU9EMAYcghStx">2K 跟随</option>
+                            <option value="2" data-page-node-id="N2FaJEg4E09xSUuxKNLnFp">边线视角</option>
+                            <option value="3" data-page-node-id="vdjEHHfT0itVRTcmb6xC7F">全场战术</option>
                         </select>
                     </label>
-                    <label>
+                    <label data-page-node-id="Og8I0A929WzlVoWeMdh9pr">
                         画质
-                        <select id="qualitySelect">
-                            <option value="high">高 · 阴影 + 反射</option>
-                            <option value="medium">中 · 节能反射</option>
-                            <option value="low">低 · 流畅优先</option>
+                        <select id="qualitySelect" data-page-node-id="VxW7TnoDGxbxoAyrLcuyt4">
+                            <option value="high" data-page-node-id="PmtHRHCaP6ppGS4A30UtSo">高 · 阴影 + 反射</option>
+                            <option value="medium" data-page-node-id="9KNH9i3rrIVDqnB5HTbUaO">中 · 节能反射</option>
+                            <option value="low" data-page-node-id="e7HfUbCBLOL2oYLWpmB8vL">低 · 流畅优先</option>
                         </select>
                     </label>
-                    <label>
-                        音量<input id="volumeRange" type="range" min="0" max="1" step="0.05" value="0.6">
+                    <label data-page-node-id="AQ6C3Azp7XRCdT0OLNU6iY">
+                        音量<input id="volumeRange" type="range" min="0" max="1" step="0.05" value="0.6" data-page-node-id="px0hJQ5yDffsYti0wP49uP">
                     </label>
                 </div>
-                <div class="modal-buttons">
-                    <button id="restartBtn" class="secondary">重新比赛</button>
-                    <button id="returnHome" class="secondary">返回主场</button>
+                <div class="modal-buttons" data-page-node-id="iswOzjRqDzVDIGrr78Pntd">
+                    <button id="restartBtn" class="secondary" data-page-node-id="nJEUA0My5DVc0TgL3QIlw5">重新比赛</button>
+                    <button id="returnHome" class="secondary" data-page-node-id="3LFRnMyWabHu3qOSduWkkB">返回主场</button>
                 </div>
-                <button id="pauseHelp" class="text-btn">查看完整操作指南 ↗</button>
+                <button id="pauseHelp" class="text-btn" data-page-node-id="LA5Z50ly78BdorBoTgtG1t">查看完整操作指南 ↗</button>
             </section>
-            <section id="helpPanel" class="modal-panel help-panel" hidden>
-                <div class="modal-kicker">LEARN THE GAME.</div>
-                <h2>
-                    PLAYBOOK<span>操作手册</span>
+            <section id="helpPanel" class="modal-panel help-panel" hidden data-page-node-id="mWLffmlHYiiKiB8jqqPL7n">
+                <div class="modal-kicker" data-page-node-id="Fp7ybDERxoV5NL6dGYjEmu">LEARN THE GAME.</div>
+                <h2 data-page-node-id="iUl8QoPoQ8isCO4taUQJ3h">
+                    PLAYBOOK<span data-page-node-id="5MmTj4c9BZuMl1EITYipsR">操作手册</span>
                 </h2>
-                <p class="help-intro">
-                    移动采用<strong>屏幕方向</strong>
+                <p class="help-intro" data-page-node-id="YajolRYIYQCw5F6nOIZsDL">
+                    移动采用<strong data-page-node-id="14nTkzjyHEz8DJAx5XSjZx">屏幕方向</strong>
                     。进攻时自动控制接球队友；防守时可自由切人。
                 </p>
-                <div class="key-grid">
-                    <div>
-                        <kbd>W A S D / ↑↓←→</kbd>
-                        <span>移动球员</span>
+                <div class="key-grid" data-page-node-id="zc9D8Afj5e0ziCbJvA8T04">
+                    <div data-page-node-id="bMFinPtne7reQ1gubrklwF">
+                        <kbd data-page-node-id="DUGyNlCoJSCznnOm0uXRRp">W A S D / ↑↓←→</kbd>
+                        <span data-page-node-id="UmvjAxZEPyq1wmfjgjVxPC">移动球员</span>
                     </div>
-                    <div>
-                        <kbd>SHIFT</kbd>
-                        <span>加速冲刺，消耗体力</span>
+                    <div data-page-node-id="nFqffLy9xqMMTZE8BStYjW">
+                        <kbd data-page-node-id="W10eIb3EkQcEnrHf6y3wah">SHIFT</kbd>
+                        <span data-page-node-id="YGlwDKtI52pTgusXCRHGgW">加速冲刺，消耗体力</span>
                     </div>
-                    <div>
-                        <kbd>SPACE 按住 → 松开</kbd>
-                        <span>投篮 / 防守时起跳封盖</span>
+                    <div data-page-node-id="BNOFPer4MH8fnQQjM04ieN">
+                        <kbd data-page-node-id="nOEUleQcSmGHIN1qMvYbrR">SPACE 按住 → 松开</kbd>
+                        <span data-page-node-id="AIu3tWwiOJRjuXbvRTR7oM">投篮 / 防守时起跳封盖</span>
                     </div>
-                    <div>
-                        <kbd>E</kbd>
-                        <span>传给空位队友 / 防守切人</span>
+                    <div data-page-node-id="850uvCEAJTKQRtJz5FUOEX">
+                        <kbd data-page-node-id="xqH25XNW4XPSXHJoJepuqG">E</kbd>
+                        <span data-page-node-id="0Z5VDIMR2TqSWkZXCww0IA">传给空位队友 / 防守切人</span>
                     </div>
-                    <div>
-                        <kbd>1 — 5</kbd>
-                        <span>指定队友传球 / 指定切人</span>
+                    <div data-page-node-id="SdioswnlkOsFAJ8ByZxuVn">
+                        <kbd data-page-node-id="L844zY78ycPYrLeXFlYyZZ">1 — 5</kbd>
+                        <span data-page-node-id="gvUJ7NM9t7XIWvm7Bgk2OZ">指定队友传球 / 指定切人</span>
                     </div>
-                    <div>
-                        <kbd>Q</kbd>
-                        <span>运球变向 / 防守抢断</span>
+                    <div data-page-node-id="sLNTTPXDm7B53wsLjSZQPW">
+                        <kbd data-page-node-id="wk0r7ppzG1vasYHHrnlenE">Q</kbd>
+                        <span data-page-node-id="07dvQJ40NdiJAN6rLvhkRa">运球变向 / 防守抢断</span>
                     </div>
-                    <div>
-                        <kbd>X</kbd>
-                        <span>篮下扣篮 / 防守盖帽</span>
+                    <div data-page-node-id="pt1ZlNQyCThGfcBc2jS4ax">
+                        <kbd data-page-node-id="hHqZjIL1tNOuCrvCYjrxlF">X</kbd>
+                        <span data-page-node-id="p7XMmrQwjRBL5oLAmS01Fs">篮下扣篮 / 防守盖帽</span>
                     </div>
-                    <div>
-                        <kbd>F</kbd>
-                        <span>呼叫挡拆 / 防守切人</span>
+                    <div data-page-node-id="1Cgj1hK22BJws6SWeZtZ00">
+                        <kbd data-page-node-id="MIc6QvvY65v8xT8RGknTRC">F</kbd>
+                        <span data-page-node-id="trGBAIho0OqMSS1K4NealR">呼叫挡拆 / 防守切人</span>
                     </div>
-                    <div>
-                        <kbd>C</kbd>
-                        <span>切换 4 种比赛镜头</span>
+                    <div data-page-node-id="DMURYOdETs3DvMbeQ909SL">
+                        <kbd data-page-node-id="d3Zd2RZLtEwsz8xVhPF8HV">C</kbd>
+                        <span data-page-node-id="C93v1LjesrmaqiKMVPVVp2">切换 4 种比赛镜头</span>
                     </div>
-                    <div>
-                        <kbd>R</kbd>
-                        <span>最近约 6 秒慢动作回放</span>
+                    <div data-page-node-id="IITyxXNRyhoFuVLbHFnXou">
+                        <kbd data-page-node-id="BPdtmC3GrhWYiWmhsCl1dd">R</kbd>
+                        <span data-page-node-id="PZwthETmhQ4Zva7tZoygAG">最近约 6 秒慢动作回放</span>
                     </div>
-                    <div>
-                        <kbd>TAB</kbd>
-                        <span>完整球员技术统计</span>
+                    <div data-page-node-id="CbIMYDZctSM0ILK4RvrGgS">
+                        <kbd data-page-node-id="2PAYLkbnqSEGBjnPXK3MDx">TAB</kbd>
+                        <span data-page-node-id="9yqF7Hla7bOYlM42YODgVE">完整球员技术统计</span>
                     </div>
-                    <div>
-                        <kbd>ESC / P · M · H</kbd>
-                        <span>暂停 · 声音 · 操作指南</span>
+                    <div data-page-node-id="EYZArNX0PmPUuDDwp9oeD3">
+                        <kbd data-page-node-id="hjtY0tg5AIe43EHJS0wQdM">ESC / P · M · H</kbd>
+                        <span data-page-node-id="pAxJBlJvkLne8IEv4WWAmC">暂停 · 声音 · 操作指南</span>
                     </div>
                 </div>
-                <div class="help-tip">
-                    <b>GREEN MEANS GO.</b>
-                    <p>按住空格，出手条进入绿色区间时松开。大空位、充足体力、合理射程有利于命中；贴防与强投会降低成功率。靠近篮筐按 X 扣篮。</p>
+                <div class="help-tip" data-page-node-id="5AjLof7ByYW8r8hUv9LBYg">
+                    <b data-page-node-id="tRe4mNOxCuKEan3QAXnAxS">GREEN MEANS GO.</b>
+                    <p data-page-node-id="x51BoysWaGamUdTi9PDuMs">按住空格，出手条进入绿色区间时松开。大空位、充足体力、合理射程有利于命中；贴防与强投会降低成功率。靠近篮筐按 X 扣篮。</p>
                 </div>
-                <p class="gamepad-note">触屏：左摇杆移动，右侧按钮操作。手柄：左摇杆移动，A 传球，X 投篮，B 变向/抢断，Y 扣篮/封盖，RT 加速。</p>
-                <button id="closeHelp" class="primary full">
+                <p class="gamepad-note" data-page-node-id="ZnzC2sR3aawTSHflZzBnHQ">触屏：左摇杆移动，右侧按钮操作。手柄：左摇杆移动，A 传球，X 投篮，B 变向/抢断，Y 扣篮/封盖，RT 加速。</p>
+                <button id="closeHelp" class="primary full" data-page-node-id="BvtN8PTb5JS0s7pmat0MhQ">
                     明白了，上场 
-                    <svg>
-                        <use href="#i-arrow"/>
+                    <svg data-page-node-id="4AXp1mdqVZ4W7tolHapoTt">
+                        <use href="#i-arrow" data-page-node-id="h7NrZeaVBhziK91XBL2AVd"/>
                     </svg>
                 </button>
             </section>
-            <section id="statsPanel" class="modal-panel stats-panel" hidden>
-                <div class="modal-kicker">EVERY POSSESSION COUNTS.</div>
-                <div class="stats-heading">
-                    <h2>
-                        BOX SCORE<span>技术统计</span>
+            <section id="statsPanel" class="modal-panel stats-panel" hidden data-page-node-id="AQCgfyaGWYwpTnEUrYYQ6V">
+                <div class="modal-kicker" data-page-node-id="0MhmxWFOFTqDFO3wo8tgLW">EVERY POSSESSION COUNTS.</div>
+                <div class="stats-heading" data-page-node-id="lpV1U4BpVD2962EDOKGs6s">
+                    <h2 data-page-node-id="fQRwMznjBww2JeE4REij4l">
+                        BOX SCORE<span data-page-node-id="psxeEvd8fSjJ4oDyTUmA8X">技术统计</span>
                     </h2>
-                    <button id="closeStats" class="icon-btn" aria-label="关闭统计">×</button>
+                    <button id="closeStats" class="icon-btn" aria-label="关闭统计" data-page-node-id="ncvc79DUjxXLBGK8B2BJUz">×</button>
                 </div>
-                <div id="statsContent"></div>
-                <p class="stat-legend">PTS 得分 · REB 篮板 · AST 助攻 · STL 抢断 · BLK 盖帽 · FG 投篮 · 3PT 三分 · TO 失误</p>
+                <div id="statsContent" data-page-node-id="wv5nJ0gUykJkuehUwOYFAC"></div>
+                <p class="stat-legend" data-page-node-id="rIa96WKdduEGk3T0ocI1YO">PTS 得分 · REB 篮板 · AST 助攻 · STL 抢断 · BLK 盖帽 · FG 投篮 · 3PT 三分 · TO 失误</p>
             </section>
-            <section id="finishPanel" class="modal-panel finish-panel" hidden>
-                <div class="modal-kicker">FINAL BUZZER.</div>
-                <h2 id="finishTitle">
-                    VICTORY<span>比赛结束</span>
+            <section id="finishPanel" class="modal-panel finish-panel" hidden data-page-node-id="WV1OS3TBITgAr1U5LN7GVf">
+                <div class="modal-kicker" data-page-node-id="ZE3snYDy9kBvKoJB5zbbnF">FINAL BUZZER.</div>
+                <h2 id="finishTitle" data-page-node-id="ScK7xuLGc7zPJJjZ6rk8xa">
+                    VICTORY<span data-page-node-id="CO6MAAytTg76Srnl4aNv0u">比赛结束</span>
                 </h2>
-                <div id="finishScore" class="finish-score">0 — 0</div>
-                <div id="finishMvp" class="finish-mvp"></div>
-                <div id="finishSummary" class="finish-summary"></div>
-                <button id="playAgain" class="primary full">
+                <div id="finishScore" class="finish-score" data-page-node-id="mnYdjH9Iyk24gsKf71szYJ">0 — 0</div>
+                <div id="finishMvp" class="finish-mvp" data-page-node-id="dHQmcoE6ZlSh5iUgCZRVvN"></div>
+                <div id="finishSummary" class="finish-summary" data-page-node-id="OHdAYV27AFcCBfKy9JOEVd"></div>
+                <button id="playAgain" class="primary full" data-page-node-id="4M8DjDN2KW2VDtcMpRxDFH">
                     再战一场 
-                    <svg>
-                        <use href="#i-arrow"/>
+                    <svg data-page-node-id="L9C6Et1hMG84yLWBCBdm6T">
+                        <use href="#i-arrow" data-page-node-id="pGhL0zxFkyWVLR9K0mpjLH"/>
                     </svg>
                 </button>
-                <button id="finishHome" class="secondary full">返回主场</button>
+                <button id="finishHome" class="secondary full" data-page-node-id="pwWJCYb3lNkygZmrhTS7uM">返回主场</button>
             </section>
         </div>
-        <div id="touchControls" hidden>
-            <div id="joystick">
-                <div id="joystickKnob"></div>
+        <div id="touchControls" hidden data-page-node-id="cdWtgqdIEpkV7xQ2r5GJaz">
+            <div id="joystick" data-page-node-id="mXvOjIvx9jAuzChWR4AxR9">
+                <div id="joystickKnob" data-page-node-id="mt6FA4TewIqB005A4XccYe"></div>
             </div>
-            <div class="touch-buttons">
-                <button id="touchSprint">冲刺</button>
-                <button id="touchMove">
-                    变向<br>抢断
+            <div class="touch-buttons" data-page-node-id="8QmWNzjMZe8t3AbuMxTWYF">
+                <button id="touchSprint" data-page-node-id="xaHBd44GOg4BrslAHvrmVx">冲刺</button>
+                <button id="touchMove" data-page-node-id="Xspj6N4jKpqa77l9B560QL">
+                    变向<br data-page-node-id="ywN7aHVc2bXGBsNGgp0Coh">抢断
                 </button>
-                <button id="touchPass">
-                    传球<br>切人
+                <button id="touchPass" data-page-node-id="SIZZ9qhW7cAwfdWKBZFG74">
+                    传球<br data-page-node-id="tl5CXyDCd3lPexHocYPtXQ">切人
                 </button>
-                <button id="touchShoot">
-                    投篮<br>封盖
+                <button id="touchShoot" data-page-node-id="UuTZiQebpP7sJLrczzQsJm">
+                    投篮<br data-page-node-id="99hlZqbz5qeUY1pOijdRcD">封盖
                 </button>
             </div>
         </div>
