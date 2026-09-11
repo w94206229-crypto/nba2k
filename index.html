@@ -1143,14 +1143,14 @@
 
             .minimap-wrap {
                 position: absolute;
-                right: 24px;
-                top: 126px;
+                left: 50%;
+                bottom: 52px;
+                transform: translateX(-50%);
                 width: 210px;
-                background: rgba(12,24,26,.66);
+                background: rgba(11,21,24,.92);
                 border: 1px solid #aec3ac28;
                 border-radius: 3px;
-                padding: 9px 10px 5px;
-                backdrop-filter: blur(8px)
+                padding: 9px 10px 5px
             }
 
             .mini-label {
@@ -1226,7 +1226,15 @@
                 color: #8ca18f;
                 padding: 0 29px;
                 letter-spacing: .5px;
-                border-top: 1px solid #849a811d
+                border-top: 1px solid #849a811d;
+                transform: translateY(100%);
+                opacity: 0;
+                transition: transform .32s cubic-bezier(.2,.7,.3,1),opacity .32s ease
+            }
+
+            .bottom-stripe.revealed {
+                transform: translateY(0);
+                opacity: 1
             }
 
             .bottom-stripe>span:last-child {
@@ -1453,7 +1461,7 @@
             .event-feed {
                 position: absolute;
                 right: 28px;
-                top: 266px;
+                top: 157px;
                 width: 174px;
                 display: flex;
                 flex-direction: column;
@@ -2057,12 +2065,54 @@
                 bottom: 100px
             }
 
-            #touchSprint {
-                right: 0;
-                bottom: 198px;
-                width: 80px;
-                height: 80px;
-                font-size: 12px
+            #joystick.sprinting {
+                border-color: #c2ec8ecd;
+                box-shadow: 0 0 0 3px #b5dc8838,0 0 20px #a8d58059
+            }
+
+            #joystick.sprinting #joystickKnob {
+                background: #d6f2a0a6;
+                border-color: #e2f7b9
+            }
+
+            #sprintGauge {
+                position: absolute;
+                left: 75px;
+                bottom: 204px;
+                width: 144px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 7px;
+                letter-spacing: 1px;
+                color: #c2d3ba;
+                text-shadow: 0 1px 2px #000000a6;
+                pointer-events: none
+            }
+
+            #sprintGauge>b {
+                font-weight: 700;
+                color: #d8ecc0;
+                letter-spacing: 2px
+            }
+
+            #sprintGauge .sprint-track {
+                flex: 1;
+                height: 6px;
+                border-radius: 3px;
+                background: #0a1417c4;
+                border: 1px solid #b7d49940;
+                box-shadow: 0 1px 3px #00000059;
+                overflow: hidden
+            }
+
+            #sprintGauge .sprint-track>i {
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: var(--lime);
+                transition: width .08s linear
             }
 
             body.touch-device.playing .controls-hint {
@@ -2070,7 +2120,7 @@
             }
 
             body.touch-device.playing .player-card {
-                bottom: 246px;
+                bottom: 262px;
                 transform: scale(.83);
                 transform-origin: bottom left
             }
@@ -2556,10 +2606,12 @@
                 }
 
                 .minimap-wrap {
-                    top: 112px;
-                    right: 20px;
-                    transform: scale(.85);
-                    transform-origin: top right
+                    left: 50%;
+                    right: auto;
+                    top: auto;
+                    bottom: 44px;
+                    transform: translateX(-50%) scale(.85);
+                    transform-origin: bottom center
                 }
 
                 .controls-hint {
@@ -2574,7 +2626,7 @@
                 }
 
                 .event-feed {
-                    top: 240px;
+                    top: 147px;
                     width: 135px;
                     right: 20px
                 }
@@ -2796,12 +2848,12 @@
                 }
 
                 .minimap-wrap {
-                    top: 170px!important;
-                    right: 16px!important;
-                    bottom: auto!important;
-                    left: auto!important;
-                    transform: scale(.62)!important;
-                    transform-origin: top right!important
+                    left: 50%!important;
+                    right: auto!important;
+                    top: auto!important;
+                    bottom: 244px!important;
+                    transform: translateX(-50%) scale(.62)!important;
+                    transform-origin: bottom center!important
                 }
 
                 .feedback {
@@ -2850,7 +2902,7 @@
                 }
 
                 .event-feed {
-                    top: 262px;
+                    top: 215px;
                     right: 16px;
                     width: 120px
                 }
@@ -2912,6 +2964,12 @@
                 #joystickKnob {
                     left: 37px;
                     top: 37px
+                }
+
+                #sprintGauge {
+                    left: 63px;
+                    bottom: 186px;
+                    width: 126px
                 }
 
                 .touch-buttons {
@@ -3210,10 +3268,12 @@
                 }
 
                 .minimap-wrap {
-                    top: 100px;
-                    right: 16px;
-                    transform: scale(.62);
-                    transform-origin: top right
+                    left: 50%;
+                    right: auto;
+                    top: auto;
+                    bottom: 36px;
+                    transform: translateX(-50%) scale(.62);
+                    transform-origin: bottom center
                 }
 
                 .controls-hint {
@@ -3248,7 +3308,7 @@
                 }
 
                 .event-feed {
-                    top: 192px;
+                    top: 108px;
                     width: 125px;
                     right: 20px
                 }
@@ -3285,6 +3345,12 @@
                 #joystickKnob {
                     left: 31px;
                     top: 31px
+                }
+
+                #sprintGauge {
+                    left: 71px;
+                    bottom: 172px;
+                    width: 114px
                 }
 
                 .touch-buttons {
@@ -4064,7 +4130,7 @@ body.playing:has(#netHud:not([hidden])) .last-shot { top:174px; }
                     <b data-page-node-id="tRe4mNOxCuKEan3QAXnAxS">GREEN MEANS GO.</b>
                     <p data-page-node-id="x51BoysWaGamUdTi9PDuMs">按住空格，出手条进入绿色区间时松开。大空位、充足体力、合理射程有利于命中；贴防与强投会降低成功率。靠近篮筐按 X 扣篮。</p>
                 </div>
-                <p class="gamepad-note" data-page-node-id="ZnzC2sR3aawTSHflZzBnHQ">触屏：左摇杆移动，右侧按钮操作。手柄：左摇杆移动，A 传球，X 投篮，B 变向/抢断，Y 扣篮/封盖，RT 加速。</p>
+                <p class="gamepad-note" data-page-node-id="ZnzC2sR3aawTSHflZzBnHQ">触屏：左摇杆移动，把摇杆拉出外圈即冲刺（消耗体力，看摇杆上方的冲刺条）；右侧按钮传球 / 变向 / 投篮。手柄：左摇杆移动，A 传球，X 投篮，B 变向/抢断，Y 扣篮/封盖，RT 加速。</p>
                 <button id="closeHelp" class="primary full" data-page-node-id="BvtN8PTb5JS0s7pmat0MhQ">
                     明白了，上场 
                     <svg data-page-node-id="4AXp1mdqVZ4W7tolHapoTt">
@@ -4104,8 +4170,13 @@ body.playing:has(#netHud:not([hidden])) .last-shot { top:174px; }
             <div id="joystick" data-page-node-id="mXvOjIvx9jAuzChWR4AxR9">
                 <div id="joystickKnob" data-page-node-id="mt6FA4TewIqB005A4XccYe"></div>
             </div>
+            <div id="sprintGauge">
+                <b>冲刺</b>
+                <div class="sprint-track">
+                    <i id="sprintFill"></i>
+                </div>
+            </div>
             <div class="touch-buttons" data-page-node-id="8QmWNzjMZe8t3AbuMxTWYF">
-                <button id="touchSprint" data-page-node-id="xaHBd44GOg4BrslAHvrmVx">冲刺</button>
                 <button id="touchMove" data-page-node-id="Xspj6N4jKpqa77l9B560QL">
                     变向<br data-page-node-id="ywN7aHVc2bXGBsNGgp0Coh">抢断
                 </button>
@@ -7309,12 +7380,18 @@ precision highp float;void main(){}`;
                               , dy = e.clientY - r.top - r.height / 2
                               , max = r.width * .32
                               , mag = Math.hypot(dx, dy);
+                            // 摇杆拉到外圈之外即触发冲刺，留少量迟滞避免边缘抖动
+                            if (mag > r.width * .50)
+                                this.touch.sprint = true;
+                            else if (mag < r.width * .40)
+                                this.touch.sprint = false;
                             if (mag > max) {
                                 dx *= max / mag;
                                 dy *= max / mag
                             }
                             this.touch.x = dx / max;
                             this.touch.y = -dy / max;
+                            joy.classList.toggle('sprinting', this.touch.sprint);
                             knob.style.transform = `translate(${dx}px,${dy}px)`
                         }
                         ;
@@ -7332,6 +7409,8 @@ precision highp float;void main(){}`;
                         const stopJoy = () => {
                             joyId = null;
                             this.touch.x = this.touch.y = 0;
+                            this.touch.sprint = false;
+                            joy.classList.remove('sprinting');
                             knob.style.transform = ''
                         }
                         ;
@@ -7354,10 +7433,22 @@ precision highp float;void main(){}`;
                         }
                         ;
                         hold('touchShoot', () => this.command('beginShot'), () => this.command('releaseShot'));
-                        hold('touchSprint', () => this.touch.sprint = true, () => this.touch.sprint = false);
                         on('touchPass', () => this.command('pass'));
                         on('touchMove', () => this.command('crossover'));
                         window.addEventListener('gamepadconnected', () => this.toast('手柄已连接 · 左摇杆移动，X 键投篮'));
+                        const stripe = document.querySelector('.bottom-stripe');
+                        if (stripe) {
+                            let stripeTimer = 0;
+                            const revealStripe = () => {
+                                stripe.classList.add('revealed');
+                                clearTimeout(stripeTimer);
+                                stripeTimer = setTimeout(() => stripe.classList.remove('revealed'), 2600)
+                            };
+                            for (const ev of ['mousemove', 'pointerdown', 'pointermove', 'touchstart'])
+                                window.addEventListener(ev, revealStripe, {
+                                    passive: true
+                                })
+                        }
                     }
                     clearInput() {
                         this.keys = {};
@@ -7793,6 +7884,11 @@ precision highp float;void main(){}`;
                         $('staminaFill').style.width = p.stamina + '%';
                         $('staminaFill').style.background = p.stamina < 20 ? '#f59962' : 'var(--lime)';
                         $('staminaNumber').textContent = Math.round(p.stamina);
+                        const sprintFill = $('sprintFill');
+                        if (sprintFill) {
+                            sprintFill.style.width = p.stamina + '%';
+                            sprintFill.style.background = p.stamina < 20 ? '#f59962' : 'var(--lime)'
+                        }
                         $('statPts').textContent = p.stats.pts;
                         $('statReb').textContent = p.stats.reb;
                         $('statAst').textContent = p.stats.ast;
